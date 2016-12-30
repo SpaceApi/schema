@@ -1,0 +1,106 @@
+{
+    "description": "SpaceAPI 0.8",
+    "type": "object",
+    "properties": {
+        "api": {
+            "description": "The version of SpaceAPI your endpoint uses",
+            "type": "string",
+            "required": true,
+            "enum": ["0.8"]
+        },
+        "space": {
+            "description": "The name of your space",
+            "type": "string",
+            "required": true
+        },
+        "logo": {
+            "description": "The space logo",
+            "type": "string",
+            "required": true
+        },
+        "url": {
+            "required": true,
+            "type": "string"
+        },
+        "address": {
+            "description": "The main website",
+            "required": false,
+            "type": "string"
+        },
+        "phone": {
+                    "description": "Phone number, including country code with a leading plus sign. Example: <samp>+1 800 555 4567</samp>",
+            "required": false,
+            "type": "string"
+        },
+        "lat": {
+            "description": "Latitude of your space location, in degree with decimal places. Use positive values for locations north of the equator, negative values for locations south of equator.",
+            "required": false,
+            "type": "number"
+        },
+        "lon": {
+            "description": "Latitude of your space location, in degree with decimal places. Use positive values for locations north of the equator, negative values for locations south of equator.",
+            "required": false,
+            "type": "number"
+        },
+        "cam": {
+            "description": "URL(s) of webcams in your space",
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1
+        },
+        "stream": {
+            "description": "A mapping of stream types to stream URLs. Example: <samp>{'mp4':'http\/\/example.org/stream.mpg', 'mjpeg':'http:\/\/example.org/stream.mjpeg'}</samp>",
+            "required": false,
+            "type": "object"
+        },
+        "open": {
+            "description": "A boolean which indicates if the space is currently open",
+            "required": true,
+            "type": "boolean"
+        },
+        "status": {
+            "description": "An additional free-form string, could be something like <samp>'open for public'</samp>, <samp>'members only'</samp> or whatever you want it to be",
+            "required": false,
+            "type": "string"
+        },
+        "lastchange": {
+            "description": "The Unix timestamp when the space status changed most recently",
+            "required": false,
+            "type": "number"
+        },
+        "events": {
+            "description": "Events which happened recently in your space and which could be interesting to the public, like 'User X has entered/triggered/did something at timestamp Z'",
+            "required": false,
+            "type": "array",
+            "items": {
+                "required": false,
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "Name or other identity of the subject (e.g. <samp>J. Random Hacker</samp>, <samp>fridge</samp>, <samp>3D printer</samp>, …)",
+                        "required": true,
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "Action (e.g. <samp>check-in</samp>, <samp>check-out</samp>, <samp>finish-print</samp>, …). Define your own actions and use them consistently, canonical actions are not (yet) specified",
+                        "required": true,
+                        "type": "string"
+                    },
+                    "t": {
+                        "description": "Unix timestamp when the event occured",
+                        "required": true,
+                        "type": "number"
+                    },
+                    "extra": {
+                        "description": "A custom text field to give more information about the event",
+                        "required": false,
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
