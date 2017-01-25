@@ -206,6 +206,10 @@
               "twitter": {
                 "description": "Twitter username with leading <samp>@</samp>.",
                 "type": "string"
+              },
+              "xmpp": {
+                  "description": "XMPP (Jabber) ID",
+                  "type": "string"
               }
             }
           }
@@ -248,7 +252,7 @@
           "description": "The e-mail address of your mailing list. If you use Google Groups then the e-mail looks like <samp>your-group@googlegroups.com</samp>.",
           "type": "string"
         },
-        "jabber": {
+        "xmpp": {
           "description": "A public Jabber/XMPP multi-user chatroom in the form <samp>chatroom@conference.example.net</samp>",
           "type": "string"
         },
