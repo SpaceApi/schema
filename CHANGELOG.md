@@ -9,4 +9,5 @@ Changes should start with one of the following tags:
 
 ## v0.14 (unreleased)
 
-- ...
+- [changed] The `jabber` key under `contact` was renamed to `xmpp`
+- [added] The `contact.keymasters` array items can also contain a `xmpp` field
