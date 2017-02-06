@@ -11,4 +11,4 @@ Changes should start with one of the following tags:
 
 - [changed] The `jabber` key under `contact` was renamed to `xmpp`
 - [added] The `contact.keymasters` array items can also contain a `xmpp` field
-- [changed] Removed `enum` in `sensors.account_balance`
+- [changed] The value in `sensors.account_balance` can now be any ISO 4217 string
