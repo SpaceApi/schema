@@ -894,7 +894,7 @@
                 "type": "number"
               },
               "unit": {
-                "description": "What's the currency? It should be formated according to <a href=\"http://de.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
+                "description": "What's the currency? It should be formated according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
                 "type": "string"
               },
               "location": {
