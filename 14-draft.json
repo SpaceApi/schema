@@ -894,14 +894,8 @@
                 "type": "number"
               },
               "unit": {
-                "description": "What's the currency? If your currency is missing open a new <a href=\"https://github.com/slopjong/OpenSpaceLint/issues\" target=\"_blank\">issue</a> and request the addition of your currency according <a href=\"http://de.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a>.",
-                "type": "string",
-                "enum": [
-                  "BTC",
-                  "EUR",
-                  "USD",
-                  "GBP"
-                ]
+                "description": "What's the currency? It should be formatted according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
+                "type": "string"
               },
               "location": {
                 "description": "If you have more than one account you can use this field to specify where it is.",
