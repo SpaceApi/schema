@@ -1163,7 +1163,7 @@
                     ]
                 },
                 "description": {
-                    "description": "A free form string."
+                    "description": "A free form string.",
                     "type": "string"
                 }
             },
