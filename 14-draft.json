@@ -1132,6 +1132,48 @@
           "end"
         ]
       }
+    },
+    "membership_plans": {
+        "description": "A list of the different memberhsip plans your hackerspace might have.",
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "The name of the membership plan. For example Student Membership, Normal Membership etc...",
+                    "type": "string"
+                },
+                "value": {
+                    "description": "How much does this plan cost!",
+                    "type": "number"
+                },
+                "currency": {
+                    "description": "What's the currency? It should be formatted according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
+                    "type": "string"
+                },
+                "renewal_interval": {
+                    "description": "When does the membership be renewed!",
+                    "type": "string",
+                    "enum": [
+                        "yearly",
+                        "monthly",
+                        "weekly",
+                        "daily",
+                        "hourly"
+                    ]
+                },
+                "description": {
+                    "description": "A free form string."
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "value",
+                "currency",
+                "renewal_interval"
+            ]
+        }
     }
   },
   "required": [
