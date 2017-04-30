@@ -1152,14 +1152,15 @@
                     "type": "string"
                 },
                 "renewal_interval": {
-                    "description": "When does the membership be renewed!",
+                    "description": "When does the membership be renewed! If you select other, please specify in the description what your renewal interval is.",
                     "type": "string",
                     "enum": [
                         "yearly",
                         "monthly",
                         "weekly",
                         "daily",
-                        "hourly"
+                        "hourly",
+                        "other"
                     ]
                 },
                 "description": {
