@@ -1140,7 +1140,7 @@
             "type": "object",
             "properties": {
                 "name": {
-                    "description": "The name of the membership plan. For example Student Membership, Normal Membership etc...",
+                    "description": "The name of the membership plan. For example Student Membership, Normal Membership etc.",
                     "type": "string"
                 },
                 "value": {
