@@ -13,3 +13,4 @@ Changes should start with one of the following tags:
 - [added] The `contact.keymasters` array items can also contain a `xmpp` field
 - [changed] The value in `sensors.account_balance` can now be any ISO 4217 string
 - [added] The `timezone` key was added under `location`
+- [added] The `membership_plans` key was added to represent membership plans a space might have
