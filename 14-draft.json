@@ -1176,6 +1176,31 @@
                 "renewal_interval"
             ]
         }
+    },
+    "owner": {
+        "description": "An object of owner information, if it is different from the space name.",
+        "type": "object",
+        "properties": {
+            "name": {
+                "description": "The name of the owner association.",
+                "type": "string"
+            },
+            "url": {
+                "description": "URL to the associations website",
+                "type": "string"
+            },
+            "logo": {
+                "description": "URL to the associations logo",
+                "type": "string"
+            },
+            "description": {
+                "description": "An additional free-form string, describing the association.",
+                "type": "string"
+            }
+        },
+        "required": [
+            "name"
+        ]
     }
   },
   "required": [
