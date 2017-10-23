@@ -80,7 +80,7 @@
             "type": "string"
           },
           "t": {
-            "description": "Unix timestamp when the event occured",
+            "description": "Unix timestamp when the event occurred",
             "type": "number"
           },
           "extra": {
