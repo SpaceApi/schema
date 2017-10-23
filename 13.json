@@ -158,7 +158,7 @@
             "type": "string"
           },
           "timestamp": {
-            "description": "Unix timestamp when the event occured",
+            "description": "Unix timestamp when the event occurred",
             "type": "number"
           },
           "extra": {
@@ -253,7 +253,7 @@
           "type": "string"
         },
         "issue_mail": {
-          "description": "A seperate email address for issue reports (see the <em>issue_report_channels</em> field). This value can be Base64-encoded.",
+          "description": "A separate email address for issue reports (see the <em>issue_report_channels</em> field). This value can be Base64-encoded.",
           "type": "string"
         }
       }
@@ -535,7 +535,7 @@
               }
             },
             "beta_gamma": {
-              "description": "A sensor which cannot filter beta and gamma radiation seperately.",
+              "description": "A sensor which cannot filter beta and gamma radiation separately.",
               "type": "array",
               "items": {
                 "type": "object",
