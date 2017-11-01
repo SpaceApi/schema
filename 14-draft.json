@@ -289,42 +289,29 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "value": {
-                "description": "The sensor value",
-                "type": "number"
-              },
-              "unit": {
-                "description": "The unit of the sensor value.",
-                "type": "string",
-                "enum": [
-                  "\u00b0C",
-                  "\u00b0F",
-                  "K",
-                  "\u00b0De",
-                  "\u00b0N",
-                  "\u00b0R",
-                  "\u00b0R\u00e9",
-                  "\u00b0R\u00f8"
+            "allOf": [
+              { "$ref": "#/definitions/default_sensor" },
+              {
+                "properties": {
+                  "unit": {
+                    "description": "The unit of the sensor value.",
+                    "type": "string",
+                    "enum": [
+                      "\u00b0C",
+                      "\u00b0F",
+                      "K",
+                      "\u00b0De",
+                      "\u00b0N",
+                      "\u00b0R",
+                      "\u00b0R\u00e9",
+                      "\u00b0R\u00f8"
+                    ]
+                  }
+                },
+                "required": [
+                  "unit"
                 ]
-              },
-              "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
-              },
-              "name": {
-                "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
               }
-            },
-            "required": [
-              "value",
-              "unit",
-              "location"
             ]
           }
         },
@@ -333,27 +320,19 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "value": {
-                "description": "The sensor value",
-                "type": "boolean"
-              },
-              "location": {
-                "description": "The location of your sensor such as <samp>front door</samp>, <samp>chill room</samp> or <samp>lab</samp>.",
-                "type": "string"
-              },
-              "name": {
-                "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
+            "allOf": [
+              { "$ref": "#/definitions/basic_sensor" },
+              {
+                "properties": {
+                  "value": {
+                    "description": "The sensor value",
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
               }
-            },
-            "required": [
-              "value",
-              "location"
             ]
           }
         },
@@ -362,35 +341,22 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "value": {
-                "description": "The sensor value",
-                "type": "number"
-              },
-              "unit": {
-                "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
-                "type": "string",
-                "enum": [
-                  "hPa"
+            "allOf": [
+              { "$ref": "#/definitions/default_sensor" },
+              {
+                "properties": {
+                  "unit": {
+                    "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
+                    "type": "string",
+                    "enum": [
+                      "hPa"
+                    ]
+                  }
+                },
+                "required": [
+                  "unit"
                 ]
-              },
-              "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
-              },
-              "name": {
-                "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
               }
-            },
-            "required": [
-              "value",
-              "unit",
-              "location"
             ]
           }
         },
@@ -398,198 +364,10 @@
           "description": "Compound radiation sensor. Check this <a rel=\"nofollow\" href=\"https://sites.google.com/site/diygeigercounter/gm-tubes-supported\" target=\"_blank\">resource</a>.",
           "type": "object",
           "properties": {
-            "alpha": {
-              "description": "An alpha sensor",
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>\u00b5Sv/h = cpm x conversion_factor</div>",
-                    "type": "number"
-                  },
-                  "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
-                    "type": "string",
-                    "enum": [
-                      "cpm",
-                      "r/h",
-                      "\u00b5Sv/h",
-                      "mSv/a",
-                      "\u00b5Sv/a"
-                    ]
-                  },
-                  "dead_time": {
-                    "description": "The dead time in \u00b5s. See the description of the value field to see how to use the dead time.",
-                    "type": "number"
-                  },
-                  "conversion_factor": {
-                    "description": "The conversion from the <em>cpm</em> unit to another unit hardly depends on your tube type. See the description of the value field to see how to use the conversion factor. <strong>Note:</strong> only trust your manufacturer if it comes to the actual factor value. The internet seems <a rel=\"nofollow\" href=\"http://sapporohibaku.wordpress.com/2011/10/15/conversion-factor/\" target=\"_blank\">full of wrong copy & pastes</a>, don't even trust your neighbour hackerspace. If in doubt ask the tube manufacturer.",
-                    "type": "number"
-                  },
-                  "location": {
-                    "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                    "type": "string"
-                  },
-                  "name": {
-                    "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                    "type": "string"
-                  },
-                  "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "value",
-                  "unit"
-                ]
-              }
-            },
-            "beta": {
-              "description": "A beta sensor",
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>\u00b5Sv/h = cpm x conversion_factor</div>",
-                    "type": "number"
-                  },
-                  "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
-                    "type": "string",
-                    "enum": [
-                      "cpm",
-                      "r/h",
-                      "\u00b5Sv/h",
-                      "mSv/a",
-                      "\u00b5Sv/a"
-                    ]
-                  },
-                  "dead_time": {
-                    "description": "The dead time in \u00b5s. See the description of the value field to see how to use the dead time.",
-                    "type": "number"
-                  },
-                  "conversion_factor": {
-                    "description": "The conversion from the <em>cpm</em> unit to another unit hardly depends on your tube type. See the description of the value field to see how to use the conversion factor. <strong>Note:</strong> only trust your manufacturer if it comes to the actual factor value. The internet seems <a rel=\"nofollow\" href=\"http://sapporohibaku.wordpress.com/2011/10/15/conversion-factor/\" target=\"_blank\">full of wrong copy & pastes</a>, don't even trust your neighbour hackerspace. If in doubt ask the tube manufacturer.",
-                    "type": "number"
-                  },
-                  "location": {
-                    "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                    "type": "string"
-                  },
-                  "name": {
-                    "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                    "type": "string"
-                  },
-                  "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "value",
-                  "unit"
-                ]
-              }
-            },
-            "gamma": {
-              "description": "A gamma sensor",
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>\u00b5Sv/h = cpm x conversion_factor</div>",
-                    "type": "number"
-                  },
-                  "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
-                    "type": "string",
-                    "enum": [
-                      "cpm",
-                      "r/h",
-                      "\u00b5Sv/h",
-                      "mSv/a",
-                      "\u00b5Sv/a"
-                    ]
-                  },
-                  "dead_time": {
-                    "description": "The dead time in \u00b5s. See the description of the value field to see how to use the dead time.",
-                    "type": "number"
-                  },
-                  "conversion_factor": {
-                    "description": "The conversion from the <em>cpm</em> unit to another unit hardly depends on your tube type. See the description of the value field to see how to use the conversion factor. <strong>Note:</strong> only trust your manufacturer if it comes to the actual factor value. The internet seems <a rel=\"nofollow\" href=\"http://sapporohibaku.wordpress.com/2011/10/15/conversion-factor/\" target=\"_blank\">full of wrong copy & pastes</a>, don't even trust your neighbour hackerspace. If in doubt ask the tube manufacturer.",
-                    "type": "number"
-                  },
-                  "location": {
-                    "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                    "type": "string"
-                  },
-                  "name": {
-                    "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                    "type": "string"
-                  },
-                  "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "value",
-                  "unit"
-                ]
-              }
-            },
-            "beta_gamma": {
-              "description": "A sensor which cannot filter beta and gamma radiation separately.",
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "value": {
-                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>\u00b5Sv/h = cpm x conversion_factor</div>",
-                    "type": "number"
-                  },
-                  "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
-                    "type": "string",
-                    "enum": [
-                      "cpm",
-                      "r/h",
-                      "\u00b5Sv/h",
-                      "mSv/a",
-                      "\u00b5Sv/a"
-                    ]
-                  },
-                  "dead_time": {
-                    "description": "The dead time in \u00b5s. See the description of the value field to see how to use the dead time.",
-                    "type": "number"
-                  },
-                  "conversion_factor": {
-                    "description": "The conversion from the <em>cpm</em> unit to another unit hardly depends on your tube type. See the description of the value field to see how to use the conversion factor. <strong>Note:</strong> only trust your manufacturer if it comes to the actual factor value. The internet seems <a rel=\"nofollow\" href=\"http://sapporohibaku.wordpress.com/2011/10/15/conversion-factor/\" target=\"_blank\">full of wrong copy & pastes</a>, don't even trust your neighbour hackerspace. If in doubt ask the tube manufacturer.",
-                    "type": "number"
-                  },
-                  "location": {
-                    "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                    "type": "string"
-                  },
-                  "name": {
-                    "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                    "type": "string"
-                  },
-                  "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "value",
-                  "unit"
-                ]
-              }
-            }
+            "alpha": { "$ref": "#/definitions/radiation_sensor" },
+            "beta": { "$ref": "#/definitions/radiation_sensor" },
+            "gamma": { "$ref": "#/definitions/radiation_sensor" },
+            "beta_gamma": { "$ref": "#/definitions/radiation_sensor" }
           }
         },
         "humidity": {
@@ -597,35 +375,22 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "value": {
-                "description": "The sensor value",
-                "type": "number"
-              },
-              "unit": {
-                "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
-                "type": "string",
-                "enum": [
-                  "%"
+            "allOf": [
+              { "$ref": "#/definitions/default_sensor" },
+              {
+                "properties": {
+                  "unit": {
+                    "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
+                    "type": "string",
+                    "enum": [
+                      "%"
+                    ]
+                  }
+                },
+                "required": [
+                  "unit"
                 ]
-              },
-              "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
-              },
-              "name": {
-                "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
               }
-            },
-            "required": [
-              "value",
-              "unit",
-              "location"
             ]
           }
         },
@@ -634,35 +399,23 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "value": {
-                "description": "The sensor value",
-                "type": "number"
-              },
-              "unit": {
-                "description": "The unit, either <samp>btl</samp> for bottles or <samp>crt</samp> for crates.",
-                "type": "string",
-                "enum": [
-                  "btl",
-                  "crt"
+            "allOf": [
+              { "$ref": "#/definitions/default_sensor" },
+              {
+                "properties": {
+                  "unit": {
+                    "description": "The unit, either <samp>btl</samp> for bottles or <samp>crt</samp> for crates.",
+                    "type": "string",
+                    "enum": [
+                      "btl",
+                      "crt"
+                    ]
+                  }
+                },
+                "required": [
+                  "unit"
                 ]
-              },
-              "location": {
-                "description": "The location of your sensor such as <samp>Room 1</samp> or <samp>Room 2</samp> or <samp>Room 3</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
-              },
-              "name": {
-                "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
               }
-            },
-            "required": [
-              "value",
-              "unit"
             ]
           }
         },
@@ -671,37 +424,24 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "value": {
-                "description": "The sensor value",
-                "type": "number"
-              },
-              "unit": {
-                "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
-                "type": "string",
-                "enum": [
-                  "mW",
-                  "W",
-                  "VA"
+            "allOf": [
+              { "$ref": "#/definitions/default_sensor" },
+              {
+                "properties": {
+                  "unit": {
+                    "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
+                    "type": "string",
+                    "enum": [
+                      "mW",
+                      "W",
+                      "VA"
+                    ]
+                  }
+                },
+                "required": [
+                  "unit"
                 ]
-              },
-              "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
-              },
-              "name": {
-                "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
               }
-            },
-            "required": [
-              "value",
-              "unit",
-              "location"
             ]
           }
         },
@@ -710,10 +450,9 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "properties": {
-                "description": "",
-                "type": "object",
+            "allOf": [
+              { "$ref": "#/definitions/basic_sensor" },
+              {
                 "properties": {
                   "speed": {
                     "description": "",
@@ -808,25 +547,10 @@
                   "speed",
                   "gust",
                   "direction",
-                  "elevation"
+                  "elevation",
+                  "unit"
                 ]
-              },
-              "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
-              },
-              "name": {
-                "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
               }
-            },
-            "required": [
-              "properties",
-              "location"
             ]
           }
         },
@@ -835,55 +559,41 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "type": {
-                "description": "This field is optional but you can use it to the network type such as <samp>wifi</samp> or <samp>cable</samp>. You can even expose the number of <a href=\"https://spacefed.net/wiki/index.php/Spacenet\" target=\"_blank\">spacenet</a>-authenticated connections.",
-                "type": "string",
-                "enum": [
-                  "wifi",
-                  "cable",
-                  "spacenet"
-                ]
-              },
-              "value": {
-                "description": "The amount of network connections.",
-                "type": "number"
-              },
-              "machines": {
-                "description": "The machines that are currently connected with the network.",
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "description": "The machine name.",
-                      "type": "string"
-                    },
-                    "mac": {
-                      "description": "The machine's MAC address of the format <samp>D3:3A:DB:EE:FF:00</samp>.",
-                      "type": "string"
-                    }
+            "allOf": [
+              { "$ref": "#/definitions/default_sensor" },
+              {
+                "properties": {
+                  "type": {
+                    "description": "This field is optional but you can use it to the network type such as <samp>wifi</samp> or <samp>cable</samp>. You can even expose the number of <a href=\"https://spacefed.net/wiki/index.php/Spacenet\" target=\"_blank\">spacenet</a>-authenticated connections.",
+                    "type": "string",
+                    "enum": [
+                      "wifi",
+                      "cable",
+                      "spacenet"
+                    ]
                   },
-                  "required": [
-                    "mac"
-                  ]
+                  "machines": {
+                    "description": "The machines that are currently connected with the network.",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "description": "The machine name.",
+                          "type": "string"
+                        },
+                        "mac": {
+                          "description": "The machine's MAC address of the format <samp>D3:3A:DB:EE:FF:00</samp>.",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "mac"
+                      ]
+                    }
+                  }
                 }
-              },
-              "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
-              },
-              "name": {
-                "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
               }
-            },
-            "required": [
-              "value"
             ]
           }
         },
@@ -892,95 +602,46 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "value": {
-                "description": "How much?",
-                "type": "number"
-              },
-              "unit": {
-                "description": "What's the currency? It should be formatted according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
-                "type": "string"
-              },
-              "location": {
-                "description": "If you have more than one account you can use this field to specify where it is.",
-                "type": "string"
-              },
-              "name": {
-                "description": "Give your sensor instance a name.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
+            "allOf": [
+              { "$ref": "#/definitions/default_sensor" },
+              {
+                "properties": {
+                  "unit": {
+                    "description": "What's the currency? It should be formatted according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "unit"
+                ]
               }
-            },
-            "required": [
-              "value",
-              "unit"
             ]
           }
         },
         "total_member_count": {
           "description": "Specify the number of space members.",
           "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "value": {
-                "description": "The amount of your space members.",
-                "type": "number"
-              },
-              "location": {
-                "description": "Specify the location if your hackerspace has different departments (for whatever reason). This field is for one department. Every department should have its own sensor instance.",
-                "type": "string"
-              },
-              "name": {
-                "description": "You can use this field to specify if this sensor instance counts active or inactive members.",
-                "type": "string"
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
-              }
-            },
-            "required": [
-              "value"
-            ]
-          }
+          "items": { "$ref": "#/definitions/default_sensor" }
         },
         "people_now_present": {
           "description": "Specify the number of people that are currently in your space. Optionally you can define a list of names.",
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "value": {
-                "description": "The amount of present people.",
-                "type": "number"
-              },
-              "location": {
-                "description": "If you use multiple sensor instances for different rooms, use this field to indicate the location.",
-                "type": "string"
-              },
-              "name": {
-                "description": "Give this sensor a name if necessary at all. Use the location field for the rooms. This field is not intended to be used for names of hackerspace members. Use the field 'names' instead.",
-                "type": "string"
-              },
-              "names": {
-                "description": "List of hackerspace members that are currently occupying the space.",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "minItems": 1
-              },
-              "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
-                "type": "string"
+            "allOf": [
+              { "$ref": "#/definitions/default_sensor" },
+              {
+                "properties": {
+                  "names": {
+                    "description": "List of hackerspace members that are currently occupying the space.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1
+                  }
+                }
               }
-            },
-            "required": [
-              "value"
             ]
           }
         }
@@ -990,74 +651,10 @@
       "description": "Feeds where users can get updates of your space",
       "type": "object",
       "properties": {
-        "blog": {
-          "description": "",
-          "type": "object",
-          "properties": {
-            "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
-              "type": "string"
-            },
-            "url": {
-              "description": "Feed URL",
-              "type": "string"
-            }
-          },
-          "required": [
-            "url"
-          ]
-        },
-        "wiki": {
-          "description": "",
-          "type": "object",
-          "properties": {
-            "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
-              "type": "string"
-            },
-            "url": {
-              "description": "Feed URL",
-              "type": "string"
-            }
-          },
-          "required": [
-            "url"
-          ]
-        },
-        "calendar": {
-          "description": "",
-          "type": "object",
-          "properties": {
-            "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
-              "type": "string"
-            },
-            "url": {
-              "description": "Feed URL",
-              "type": "string"
-            }
-          },
-          "required": [
-            "url"
-          ]
-        },
-        "flickr": {
-          "description": "",
-          "type": "object",
-          "properties": {
-            "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
-              "type": "string"
-            },
-            "url": {
-              "description": "Feed URL",
-              "type": "string"
-            }
-          },
-          "required": [
-            "url"
-          ]
-        }
+        "blog": { "$ref": "#/definitions/feed" },
+        "wiki": { "$ref": "#/definitions/feed" },
+        "calendar": { "$ref": "#/definitions/feed" },
+        "flickr": { "$ref": "#/definitions/feed" }
       }
     },
     "cache": {
@@ -1175,6 +772,97 @@
                 "renewal_interval"
             ]
         }
+    }
+  },
+  "definitions": {
+    "feed": {
+      "description": "Description of a feed",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
+          "type": "string"
+        },
+        "url": {
+          "description": "Feed URL",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    },
+    "basic_sensor": {
+      "description": "Basic sensor values",
+      "type": "object",
+      "properties": {
+        "location": {
+          "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
+          "type": "string"
+        },
+        "name": {
+          "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
+          "type": "string"
+        },
+        "description": {
+          "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+          "type": "string"
+        }
+      }
+    },
+    "default_sensor": {
+      "description": "Default sensor with a numeric value",
+      "type": "object",
+      "allOf": [
+        { "$ref": "#/definitions/basic_sensor" },
+        {
+          "properties": {
+            "value": {
+              "description": "Numeric sensor reading",
+              "type": "number"
+            }
+          },
+          "required": [
+            "value"
+          ]
+        }
+      ]
+    },
+    "radiation_sensor": {
+      "description": "A radiation sensor",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "allOf": [
+          { "$ref": "#/definitions/default_sensor" },
+          {
+            "properties": {
+              "unit": {
+                "description": "Choose the appropriate unit for your radiation sensor instance.",
+                "type": "string",
+                "enum": [
+                  "cpm",
+                  "r/h",
+                  "\u00b5Sv/h",
+                  "mSv/a",
+                  "\u00b5Sv/a"
+                ]
+              },
+              "dead_time": {
+                "description": "The dead time in \u00b5s. See the description of the value field to see how to use the dead time.",
+                "type": "number"
+              },
+              "conversion_factor": {
+                "description": "The conversion from the <em>cpm</em> unit to another unit hardly depends on your tube type. See the description of the value field to see how to use the conversion factor. <strong>Note:</strong> only trust your manufacturer if it comes to the actual factor value. The internet seems <a rel=\"nofollow\" href=\"http://sapporohibaku.wordpress.com/2011/10/15/conversion-factor/\" target=\"_blank\">full of wrong copy & pastes</a>, don't even trust your neighbour hackerspace. If in doubt ask the tube manufacturer.",
+                "type": "number"
+              }
+            }
+          }
+        ],
+        "required": [
+          "unit"
+        ]
+      }
     }
   },
   "required": [
