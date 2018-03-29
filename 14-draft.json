@@ -1135,7 +1135,7 @@
       }
     },
     "membership_plans": {
-        "description": "A list of the different membership plans your hackerspace might have.",
+        "description": "A list of the different membership plans your hackerspace might have. Try to use the minimal amount of information needed to describe the membership plan. For example, if your membership fee is 10€ per month, but you bill it yearly (aka. the member pays the fee once per year), set the amount to 120 an the renewal_interval to yearly.",
         "type": "array",
         "items": {
             "type": "object",
@@ -1153,7 +1153,7 @@
                     "type": "string"
                 },
                 "renewal_interval": {
-                    "description": "How often is the membership renewed? If you select other, please specify in the description what your renewal interval is.",
+                    "description": "How often is the membership renewed (billed)? If you select other, please specify in the description what your renewal interval is.",
                     "type": "string",
                     "enum": [
                         "yearly",
