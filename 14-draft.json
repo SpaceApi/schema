@@ -217,7 +217,7 @@
                   "type": "string"
               },
               "mastodon": {
-                  "description": "Mastodon username with leading <samp>@</samp> and the instance.",
+                  "description": "Mastodon username. Example: @ordnung@chaos.social",
                   "type": "string"
               }
             }
@@ -232,7 +232,7 @@
           "type": "string"
         },
         "mastodon": {
-          "description": "Mastodon username with leading <samp>@</samp> and the instance.",
+          "description": "Mastodon username: Example: @ordnung@chaos.social.",
           "type": "string"
         },
         "facebook": {
