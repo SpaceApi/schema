@@ -1135,7 +1135,7 @@
       }
     },
     "membership_plans": {
-        "description": "A list of the different membership plans your hackerspace might have.",
+        "description": "A list of the different membership plans your hackerspace might have. Set the value according to your billing process. For example, if your membership fee is 10€ per month, but you bill it yearly (aka. the member pays the fee once per year), set the amount to 120 an the billing_interval to yearly.",
         "type": "array",
         "items": {
             "type": "object",
@@ -1152,8 +1152,8 @@
                     "description": "What's the currency? It should be formatted according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
                     "type": "string"
                 },
-                "renewal_interval": {
-                    "description": "How often is the membership renewed? If you select other, please specify in the description what your renewal interval is.",
+                "billing_interval": {
+                    "description": "How often is the membership billed? If you select other, please specify in the description what your billing interval is.",
                     "type": "string",
                     "enum": [
                         "yearly",
@@ -1173,7 +1173,7 @@
                 "name",
                 "value",
                 "currency",
-                "renewal_interval"
+                "billing_interval"
             ]
         }
     }
