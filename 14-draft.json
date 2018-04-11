@@ -215,6 +215,10 @@
               "xmpp": {
                   "description": "XMPP (Jabber) ID",
                   "type": "string"
+              },
+              "mastodon": {
+                  "description": "Mastodon username. Example: @ordnung@chaos.social",
+                  "type": "string"
               }
             }
           }
@@ -225,6 +229,10 @@
         },
         "twitter": {
           "description": "Twitter handle, with leading @",
+          "type": "string"
+        },
+        "mastodon": {
+          "description": "Mastodon username: Example: @ordnung@chaos.social.",
           "type": "string"
         },
         "facebook": {
