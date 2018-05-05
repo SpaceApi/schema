@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "description": "SpaceAPI Directory 0.2",
+  "type": "object",
+  "properties": {
+    "items": {
+      "description": "List of directory entries",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "description": "url to the spaceapi file",
+            "type": "string"
+          },
+          "valid": {
+            "description": "indicates if the provided file is valid",
+            "type": "boolean"
+
+          },
+          "space": {
+            "description": "The name of the space",
+            "type": "string"
+
+          },
+          "lastSeen": {
+            "description": "when we've seen the endpoint the last time (doesn't have to be valid, but the url was reachable and provided valid json)",
+            "type": "number"
+
+          },
+          "errMsg": {
+            "description": "provided if we found an error with that specific endpoint",
+            "type": "string"
+          }
+        },
+        "required": [
+          "url",
+          "valid"
+        ]
+      }
+    }
+  }
+}
