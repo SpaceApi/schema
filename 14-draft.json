@@ -274,7 +274,8 @@
           "type": "string"
         },
         "gopher": {
-          "description": "A URL to find information about the Space in the Gopherspace. Example: gopher://gopher.binary-kitchen.de"
+          "description": "A URL to find information about the Space in the Gopherspace. Example: gopher://gopher.binary-kitchen.de",
+          "type": "string"
         }
       }
     },
