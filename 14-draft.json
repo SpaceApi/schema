@@ -35,7 +35,7 @@
           "type": "number"
         },
         "lon": {
-          "description": "Longitude of your space location, in degree with decimal places. Use positive values for locations west of Greenwich, and negative values for locations east of Greenwich.",
+          "description": "Longitude of your space location, in degree with decimal places. Use positive values for locations east of Greenwich, and negative values for locations west of Greenwich.",
           "type": "number"
         },
         "timezone": {
