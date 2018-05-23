@@ -272,6 +272,9 @@
         "issue_mail": {
           "description": "A separate email address for issue reports (see the <em>issue_report_channels</em> field). This value can be Base64-encoded.",
           "type": "string"
+        },
+        "gopher": {
+          "description": "A URL to find information about the Space in the Gopherspace. Example: gopher://gopher.binary-kitchen.de"
         }
       }
     },
