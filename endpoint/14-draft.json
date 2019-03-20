@@ -112,6 +112,10 @@
           "description": "The Unix timestamp when the space status changed most recently",
           "type": "number"
         },
+        "nextchange": {
+          "description": "The Unix timestamp of the estimated next change (eg. planned event start/end)",
+          "type": "number"
+        },
         "trigger_person": {
           "description": "The person who lastly changed the state e.g. opened or closed the space.",
           "type": "string"
