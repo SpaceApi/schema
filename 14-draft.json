@@ -221,7 +221,7 @@
                   "type": "string"
               },
               "matrix": {
-                "description": "Matrix username. Example: <samp>@matrix-bot:matrix.org</samp>",
+                "description": "Matrix username. Example: <samp>@user:example.org</samp>",
                 "type": "string"
               }
             }
@@ -282,7 +282,7 @@
           "type": "string"
         },
         "matrix": {
-          "description": "Matrix channel/community for the Hackerspace. Example: <samp>#matrix:matrix.org</samp> or <samp>!matrix:matrix.org</samp>",
+          "description": "Matrix channel/community for the Hackerspace. Example: <samp>#spaceroom:example.org</samp> or <samp>+spacecommunity:example.org</samp>",
           "type": "string"
         }
       }
