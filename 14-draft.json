@@ -83,7 +83,7 @@
       "description": "A mapping of stream types to stream URLs.If you use other stream types make a <a href=\"add-your-space\" target=\"_blank\">change request</a> or prefix yours with <samp>ext_</samp> .",
       "type": "object",
       "properties": {
-        "m4": {
+        "mp4": {
           "description": "Your mpg stream URL. Example: <samp>{\"mp4\": \"http//example.org/stream.mpg\"}</samp>",
           "type": "string"
         },
