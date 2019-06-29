@@ -6,6 +6,7 @@ Changes should start with one of the following tags:
 
 - `[added]` for new, backward compatible features
 - `[changed]` for changes to the existing API
+- `[removed]` for keys that have been removed from the schema
 
 ## v0.14 (unreleased)
 
@@ -17,3 +18,4 @@ Changes should start with one of the following tags:
 - [changed] The unit `hPA` in `sensors.barometer.unit` was renamed to `hPa` to match the SI unit
 - [added] The `mastodon` key was added under `contact` and to `contact.keymasters` array items
 - [changed] The description of `location.lon` was changed to state the correct direction.
+- [removed] The `google` key was removed from `contact`
