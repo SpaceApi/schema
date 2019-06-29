@@ -775,7 +775,7 @@
                     ]
                   },
                   "direction": {
-                    "description": "The wind direction in degrees. Use this <a href=\"https://github.com/slopjong/OpenSpaceLint/issues/80\" target=\"_blank_\">mapping</a> to convert the degrees into a string.",
+                    "description": "The wind direction in degrees. To convert from abbreviation to degrees you can use <a href=\"https://en.wikipedia.org/wiki/Points_of_the_compass#32_compass_points\">this table.</a>",
                     "type": "object",
                     "properties": {
                       "value": {
