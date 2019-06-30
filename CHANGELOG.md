@@ -18,3 +18,4 @@ Changes should start with one of the following tags:
 - [added] The `mastodon` key was added under `contact` and to `contact.keymasters` array items
 - [changed] The description of `location.lon` was changed to state the correct direction.
 - [changed] The keys `state` and `state.open` are not required anymore and `state.open` is no longer nullable.
+- [removed] The `issue_report_channel` key was removed
