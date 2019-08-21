@@ -1100,46 +1100,6 @@
         "type": "string"
       }
     },
-    "radio_show": {
-      "description": "A list of radio shows that your hackerspace might broadcast.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name of the radio show.",
-            "type": "string"
-          },
-          "url": {
-            "description": "The stream URL which must end in a filename or a semicolon such as <br><ul><li>http://signal.hackerspaces.org:8090/signal.mp3</li><li>http://85.214.64.213:8060/;</ul>",
-            "type": "string"
-          },
-          "type": {
-            "description": "The stream encoder.",
-            "type": "string",
-            "enum": [
-              "mp3",
-              "ogg"
-            ]
-          },
-          "start": {
-            "description": "Specify the start time by using a Unix timestamp",
-            "type": "number"
-          },
-          "end": {
-            "description": "Specify the end time by using a Unix timestamp",
-            "type": "number"
-          }
-        },
-        "required": [
-          "name",
-          "url",
-          "type",
-          "start",
-          "end"
-        ]
-      }
-    },
     "membership_plans": {
         "description": "A list of the different membership plans your hackerspace might have. Set the value according to your billing process. For example, if your membership fee is 10€ per month, but you bill it yearly (aka. the member pays the fee once per year), set the amount to 120 an the billing_interval to yearly.",
         "type": "array",
