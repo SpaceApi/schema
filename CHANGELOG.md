@@ -20,3 +20,4 @@ Changes should start with one of the following tags:
 - [changed] The description of `location.lon` was changed to state the correct direction.
 - [removed] The `google` key was removed from `contact`
 - [changed] The keys `state` and `state.open` are not required anymore and `state.open` is no longer nullable.
+- [removed] The `cache` key was removed
