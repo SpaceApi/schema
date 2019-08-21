@@ -777,7 +777,7 @@
                     ]
                   },
                   "direction": {
-                    "description": "The wind direction in degrees. Use this <a href=\"https://github.com/slopjong/OpenSpaceLint/issues/80\" target=\"_blank_\">mapping</a> to convert the degrees into a string.",
+                    "description": "The wind direction in degrees.",
                     "type": "object",
                     "properties": {
                       "value": {
