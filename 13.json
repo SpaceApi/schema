@@ -80,7 +80,7 @@
       "type": "object",
       "properties": {
         "m4": {
-          "description": "Your mpg stream URL. Example: <samp>{\"mp4\": \"http//example.org/stream.mpg\"}</samp>",
+          "description": "Your mpg stream URL. Example: <samp>{\"mp4\": \"http://example.org/stream.mpg\"}</samp>",
           "type": "string"
         },
         "mjpeg": {
