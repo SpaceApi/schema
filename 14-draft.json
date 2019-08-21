@@ -237,16 +237,6 @@
           "description": "Facebook account URL.",
           "type": "string"
         },
-        "google": {
-          "description": "Google services.",
-          "type": "object",
-          "properties": {
-            "plus": {
-              "description": "Google plus URL.",
-              "type": "string"
-            }
-          }
-        },
         "identica": {
           "description": "Identi.ca or StatusNet account, in the form <samp>yourspace@example.org</samp>",
           "type": "string"
