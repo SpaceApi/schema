@@ -213,6 +213,10 @@
               "mastodon": {
                   "description": "Mastodon username. Example: @ordnung@chaos.social",
                   "type": "string"
+              },
+              "matrix": {
+                "description": "Matrix username. Example: <samp>@user:example.org</samp>",
+                "type": "string"
               }
             }
           }
@@ -269,6 +273,10 @@
         },
         "gopher": {
           "description": "A URL to find information about the Space in the Gopherspace. Example: gopher://gopher.binary-kitchen.de",
+          "type": "string"
+        },
+        "matrix": {
+          "description": "Matrix channel/community for the Hackerspace. Example: <samp>#spaceroom:example.org</samp> or <samp>+spacecommunity:example.org</samp>",
           "type": "string"
         }
       }
