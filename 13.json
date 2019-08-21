@@ -76,7 +76,7 @@
       "minItems": 1
     },
     "stream": {
-      "description": "A mapping of stream types to stream URLs.If you use other stream types make a <a href=\"add-your-space\" target=\"_blank\">change request</a> or prefix yours with <samp>ext_</samp> .",
+      "description": "A mapping of stream types to stream URLs.If you use other stream types make a <a href=\"https://github.com/spaceapi/schema/pulls\" target=\"_blank\">pull request</a> or prefix yours with <samp>ext_</samp> .",
       "type": "object",
       "properties": {
         "m4": {
