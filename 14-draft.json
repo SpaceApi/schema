@@ -258,7 +258,7 @@
           "type": "string"
         },
         "issue_mail": {
-          "description": "A separate email address for issue reports (see the <em>issue_report_channels</em> field). This value can be Base64-encoded.",
+          "description": "A separate email address for issue reports. This value can be Base64-encoded.",
           "type": "string"
         },
         "gopher": {
@@ -270,20 +270,6 @@
           "type": "string"
         }
       }
-    },
-    "issue_report_channels": {
-      "description": "This array defines all communication channels where you want to get automated issue reports about your SpaceAPI endpoint from the revalidator. This field is meant for internal usage only and it should never be consumed by any app. At least one channel must be defined. Please consider that when using <samp>ml</samp> the mailing list moderator has to moderate incoming emails or add the sender email to the subscribers. If you don't break your SpaceAPI implementation you won't get any notifications ;-)",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "email",
-          "issue_mail",
-          "twitter",
-          "ml"
-        ]
-      },
-      "minItems": 1
     },
     "sensors": {
       "description": "Data of various sensors in your space (e.g. temperature, humidity, amount of Club-Mate left, \u2026). The only canonical property is the <em>temp</em> property, additional sensor types may be defined by you. In this case, you are requested to share your definition for inclusion in this specification.",
@@ -1162,7 +1148,6 @@
     "logo",
     "url",
     "location",
-    "contact",
-    "issue_report_channels"
+    "contact"
   ]
 }
