@@ -1058,46 +1058,6 @@
         "type": "string"
       }
     },
-    "radio_show": {
-      "description": "A list of radio shows that your hackerspace might broadcast.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name of the radio show.",
-            "type": "string"
-          },
-          "url": {
-            "description": "The stream URL which must end in a filename or a semicolon such as <br><ul><li>http://signal.hackerspaces.org:8090/signal.mp3</li><li>http://85.214.64.213:8060/;</ul>",
-            "type": "string"
-          },
-          "type": {
-            "description": "The stream encoder.",
-            "type": "string",
-            "enum": [
-              "mp3",
-              "ogg"
-            ]
-          },
-          "start": {
-            "description": "Specify the start time by using the <a href=\"http://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO 8601</a> standard. This encodes the time as follows: <br><br><ul><li>Combined date and time in UTC: 2013-06-10T10:00Z</li><li>Combined date and time in localtime with the timezone offset: 2013-06-10T12:00+02:00</li><li>Combined date and time in localtime with the timezone offset: 2013-06-10T07:00-03:00</li></ul> The examples refer all to the same time.",
-            "type": "string"
-          },
-          "end": {
-            "description": "Specify the end time by using the <a href=\"http://en.wikipedia.org/wiki/ISO_8601\" target=\"_blank\">ISO 8601</a> standard. This encodes the time as follows: <br><br><ul><li>Combined date and time in UTC: 2013-06-10T10:00Z</li><li>Combined date and time in localtime with the timezone offset: 2013-06-10T12:00+02:00</li><li>Combined date and time in localtime with the timezone offset: 2013-06-10T07:00-03:00</li></ul> The examples refer all to the same time.",
-            "type": "string"
-          }
-        },
-        "required": [
-          "name",
-          "url",
-          "type",
-          "start",
-          "end"
-        ]
-      }
-    },
     "membership_plans": {
         "description": "A list of the different membership plans your hackerspace might have. Set the value according to your billing process. For example, if your membership fee is 10€ per month, but you bill it yearly (aka. the member pays the fee once per year), set the amount to 120 an the billing_interval to yearly.",
         "type": "array",

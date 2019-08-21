@@ -22,3 +22,4 @@ Changes should start with one of the following tags:
 - [changed] The keys `state` and `state.open` are not required anymore and `state.open` is no longer nullable.
 - [removed] The `issue_report_channel` key was removed
 - [removed] The `cache` key was removed
+- [removed] The `radio_show` key was removed
