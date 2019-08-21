@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "SpaceAPI 0.13",
   "type": "object",
   "properties": {
@@ -76,11 +76,11 @@
       "minItems": 1
     },
     "stream": {
-      "description": "A mapping of stream types to stream URLs.If you use other stream types make a <a href=\"add-your-space\" target=\"_blank\">change request</a> or prefix yours with <samp>ext_</samp> .",
+      "description": "A mapping of stream types to stream URLs. If you use other stream types make a <a href=\"https://github.com/spaceapi/schema/pulls\" target=\"_blank\">pull request</a> or prefix yours with <samp>ext_</samp>.",
       "type": "object",
       "properties": {
         "m4": {
-          "description": "Your mpg stream URL. Example: <samp>{\"mp4\": \"http//example.org/stream.mpg\"}</samp>",
+          "description": "Your mpg stream URL. Example: <samp>{\"mp4\": \"http://example.org/stream.mpg\"}</samp>",
           "type": "string"
         },
         "mjpeg": {
@@ -755,7 +755,7 @@
                     ]
                   },
                   "direction": {
-                    "description": "The wind direction in degrees. Use this <a href=\"https://github.com/slopjong/OpenSpaceLint/issues/80\" target=\"_blank_\">mapping</a> to convert the degrees into a string.",
+                    "description": "The wind direction in degrees.",
                     "type": "object",
                     "properties": {
                       "value": {
@@ -891,7 +891,7 @@
                 "type": "number"
               },
               "unit": {
-                "description": "What's the currency? If your currency is missing open a new <a href=\"https://github.com/slopjong/OpenSpaceLint/issues\" target=\"_blank\">issue</a> and request the addition of your currency according <a href=\"http://de.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a>.",
+                "description": "What's the currency? Please use the ones provided, in the next version you can use currency definitions according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a>",
                 "type": "string",
                 "enum": [
                   "BTC",
