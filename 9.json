@@ -1,4 +1,5 @@
 {
+  "$id": "https://schema.spaceapi.io/9.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "SpaceAPI 0.9",
   "type": "object",
