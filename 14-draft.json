@@ -6,10 +6,13 @@
   "properties": {
     "api": {
       "description": "The version of SpaceAPI your endpoint uses",
-      "type": "string",
-      "enum": [
-        "0.14"
-      ]
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "contains": {
+        "const": "0.14"
+      }
     },
     "space": {
       "description": "The name of your space",

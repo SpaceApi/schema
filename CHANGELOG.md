@@ -23,3 +23,4 @@ Changes should start with one of the following tags:
 - [removed] The `issue_report_channel` key was removed
 - [removed] The `cache` key was removed
 - [removed] The `radio_show` key was removed
+- [changed] `api` field is now an array that should contain the version as a string
