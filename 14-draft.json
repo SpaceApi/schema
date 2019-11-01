@@ -4,7 +4,7 @@
   "description": "SpaceAPI 0.14",
   "type": "object",
   "properties": {
-    "version_compatibility": {
+    "api_compatibility": {
       "description": "The versions your SpaceAPI endpoint supports",
       "type": "array",
       "items": {
@@ -1107,7 +1107,7 @@
     }
   },
   "required": [
-    "version_compatibility",
+    "api_compatibility",
     "space",
     "logo",
     "url",
