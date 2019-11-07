@@ -975,6 +975,47 @@
               "value"
             ]
           }
+        },
+        "network_traffic": {
+          "description": "The current network bandwidth usage",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "The measurement value",
+                "type": "number"
+              },
+              "unit": {
+                "description": "The measurement unit",
+                "type": "string",
+                "enum": [
+                  "packets/s",
+                  "bit/s",
+                  "kbit/s",
+                  "Mbit/s",
+                  "Gbit/s",
+                  "Byte/s",
+                  "kByte/s",
+                  "MByte/s",
+                  "GByte/s"
+                ]
+              },
+              "name": {
+                "description": "Name of the measurement, e.g. to distinguish between upstream and downstream traffic",
+                "type": "string"
+              },
+              "location": {
+                "description": "Location the measurement relates to, e.g. <samp>WiFi</samp> or <samp>Uplink</samp>.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "value",
+              "unit"
+            ]
+          },
+          "minItems": 1
         }
       }
     },
