@@ -1,0 +1,55 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: docker:stable
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: |
+            docker build --no-cache .
+  build:
+    docker:
+      - image: docker:stable
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker image
+          command: |
+            docker build \
+              --no-cache \
+              -t spaceapi/docson:latest \
+              -t spaceapi/docson:${CIRCLE_BRANCH} \
+              .
+      - deploy:
+          name: Push Docker image
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_API_KEY && \
+            docker push spaceapi/docson
+workflows:
+  version: 2
+
+  # Build on push to master
+  on_push:
+    jobs:
+      - test
+      - build:
+          filters:
+            branches:
+              only:
+                - master
+
+  # Build every week on Monday at 04:00 am
+  weekly:
+    triggers:
+      - schedule:
+          cron: "0 4 * * 1"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
