@@ -977,29 +977,25 @@
           }
         },
         "network_traffic": {
-          "description": "The current network bandwidth usage",
+          "description": "The current network traffic, in bits/second or packets/second (or both)",
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "value": {
-                "description": "The measurement value",
-                "type": "number"
+              "bits_per_second": {
+                "description": "The bits per second measurement value",
+                "type": "number",
+                "minimum": 0
               },
-              "unit": {
-                "description": "The measurement unit",
-                "type": "string",
-                "enum": [
-                  "packets/s",
-                  "bit/s",
-                  "kbit/s",
-                  "Mbit/s",
-                  "Gbit/s",
-                  "Byte/s",
-                  "kByte/s",
-                  "MByte/s",
-                  "GByte/s"
-                ]
+              "packets_per_second": {
+                "description": "The packets per second measurement value",
+                "type": "number",
+                "minimum": 0
+              },
+              "max_bits_per_second": {
+                "description": "The maximum available bandwith in bits/second, e.g. as sold by your ISP",
+                "type": "number",
+                "minimum": 0
               },
               "name": {
                 "description": "Name of the measurement, e.g. to distinguish between upstream and downstream traffic",
@@ -1009,11 +1005,7 @@
                 "description": "Location the measurement relates to, e.g. <samp>WiFi</samp> or <samp>Uplink</samp>.",
                 "type": "string"
               }
-            },
-            "required": [
-              "value",
-              "unit"
-            ]
+            }
           },
           "minItems": 1
         }
