@@ -982,27 +982,57 @@
           "items": {
             "type": "object",
             "properties": {
-              "bits_per_second": {
-                "description": "The bits per second measurement value",
-                "type": "number",
-                "minimum": 0
-              },
-              "packets_per_second": {
-                "description": "The packets per second measurement value",
-                "type": "number",
-                "minimum": 0
-              },
-              "max_bits_per_second": {
-                "description": "The maximum available bandwith in bits/second, e.g. as sold by your ISP",
-                "type": "number",
-                "minimum": 0
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "bits_per_second": {
+                    "description": "",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "description": "The measurement value, in bits/second",
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "maximum": {
+                        "description": "The maximum available bandwith in bits/second, e.g. as sold by your ISP",
+                        "type": "number",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "value"
+                    ]
+                  },
+                  "packets_per_second": {
+                    "description": "",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "description": "The measurement value, in packets/second",
+                        "type": "number",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "value"
+                    ]
+                  }
+                },
+                "required": [
+                  "properties"
+                ]
               },
               "name": {
                 "description": "Name of the measurement, e.g. to distinguish between upstream and downstream traffic",
                 "type": "string"
               },
               "location": {
-                "description": "Location the measurement relates to, e.g. <samp>WiFi</samp> or <samp>Uplink</samp>.",
+                "description": "Location the measurement relates to, e.g. <samp>WiFi</samp> or <samp>Uplink</samp>",
+                "type": "string"
+              },
+              "description": {
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             }
