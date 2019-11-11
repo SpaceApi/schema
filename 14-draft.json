@@ -995,7 +995,7 @@
                         "minimum": 0
                       },
                       "maximum": {
-                        "description": "The maximum available bandwith in bits/second, e.g. as sold by your ISP",
+                        "description": "The maximum available throughput in bits/second, e.g. as sold by your ISP",
                         "type": "number",
                         "minimum": 0
                       }
