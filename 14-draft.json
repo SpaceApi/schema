@@ -1018,10 +1018,7 @@
                       "value"
                     ]
                   }
-                },
-                "required": [
-                  "properties"
-                ]
+                }
               },
               "name": {
                 "description": "Name of the measurement, e.g. to distinguish between upstream and downstream traffic",
@@ -1035,7 +1032,10 @@
                 "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
-            }
+            },
+            "required": [
+              "properties"
+            ]
           },
           "minItems": 1
         }
