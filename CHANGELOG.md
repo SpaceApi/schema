@@ -23,4 +23,6 @@ Changes should start with one of the following tags:
 - [removed] The `issue_report_channel` key was removed
 - [removed] The `cache` key was removed
 - [removed] The `radio_show` key was removed
+- [removed] The `api` key was removed
+- [added] The `api_compatibility` field was added
 - [added] The `network_traffic` sensor was added
