@@ -241,6 +241,10 @@
           "description": "Facebook account URL.",
           "type": "string"
         },
+        "instagram": {
+          "description": "Instagram account handle.",
+          "type": "string"
+        },
         "identica": {
           "description": "Identi.ca or StatusNet account, in the form <samp>yourspace@example.org</samp>",
           "type": "string"
