@@ -31,7 +31,7 @@
       "type": "object",
       "properties": {
         "address": {
-          "description": "The postal address of your space (street, block, housenumber, zip code, city, whatever you usually need in your country, and the country itself).<br>Examples: <ul><li>Netzladen e.V., Breite Stra\u00dfe 74, 53111 Bonn, Germany</li></ul>",
+          "description": "The postal address of your space (street, block, housenumber, zip code, city, whatever you usually need in your country, and the country itself).<br>Examples: <ul><li>Netzladen e.V., Breite Straße 74, 53111 Bonn, Germany</li></ul>",
           "type": "string"
         },
         "lat": {
@@ -153,11 +153,11 @@
         "type": "object",
         "properties": {
           "name": {
-            "description": "Name or other identity of the subject (e.g. <samp>J. Random Hacker</samp>, <samp>fridge</samp>, <samp>3D printer</samp>, \u2026)",
+            "description": "Name or other identity of the subject (e.g. <samp>J. Random Hacker</samp>, <samp>fridge</samp>, <samp>3D printer</samp>, …)",
             "type": "string"
           },
           "type": {
-            "description": "Action (e.g. <samp>check-in</samp>, <samp>check-out</samp>, <samp>finish-print</samp>, \u2026). Define your own actions and use them consistently, canonical actions are not (yet) specified",
+            "description": "Action (e.g. <samp>check-in</samp>, <samp>check-out</samp>, <samp>finish-print</samp>, …). Define your own actions and use them consistently, canonical actions are not (yet) specified",
             "type": "string"
           },
           "timestamp": {
@@ -211,12 +211,12 @@
                 "type": "string"
               },
               "xmpp": {
-                  "description": "XMPP (Jabber) ID",
-                  "type": "string"
+                "description": "XMPP (Jabber) ID",
+                "type": "string"
               },
               "mastodon": {
-                  "description": "Mastodon username. Example: @ordnung@chaos.social",
-                  "type": "string"
+                "description": "Mastodon username. Example: @ordnung@chaos.social",
+                "type": "string"
               },
               "matrix": {
                 "description": "Matrix username. Example: <samp>@user:example.org</samp>",
@@ -276,7 +276,7 @@
       }
     },
     "sensors": {
-      "description": "Data of various sensors in your space (e.g. temperature, humidity, amount of Club-Mate left, \u2026). The only canonical property is the <em>temp</em> property, additional sensor types may be defined by you. In this case, you are requested to share your definition for inclusion in this specification.",
+      "description": "Data of various sensors in your space (e.g. temperature, humidity, amount of Club-Mate left, …). The only canonical property is the <em>temp</em> property, additional sensor types may be defined by you. In this case, you are requested to share your definition for inclusion in this specification.",
       "type": "object",
       "properties": {
         "temperature": {
@@ -293,14 +293,14 @@
                 "description": "The unit of the sensor value.",
                 "type": "string",
                 "enum": [
-                  "\u00b0C",
-                  "\u00b0F",
+                  "°C",
+                  "°F",
                   "K",
-                  "\u00b0De",
-                  "\u00b0N",
-                  "\u00b0R",
-                  "\u00b0R\u00e9",
-                  "\u00b0R\u00f8"
+                  "°De",
+                  "°N",
+                  "°R",
+                  "°Ré",
+                  "°Rø"
                 ]
               },
               "location": {
@@ -400,7 +400,7 @@
                 "type": "object",
                 "properties": {
                   "value": {
-                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>\u00b5Sv/h = cpm x conversion_factor</div>",
+                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>µSv/h = cpm x conversion_factor</div>",
                     "type": "number"
                   },
                   "unit": {
@@ -409,13 +409,13 @@
                     "enum": [
                       "cpm",
                       "r/h",
-                      "\u00b5Sv/h",
+                      "µSv/h",
                       "mSv/a",
-                      "\u00b5Sv/a"
+                      "µSv/a"
                     ]
                   },
                   "dead_time": {
-                    "description": "The dead time in \u00b5s. See the description of the value field to see how to use the dead time.",
+                    "description": "The dead time in µs. See the description of the value field to see how to use the dead time.",
                     "type": "number"
                   },
                   "conversion_factor": {
@@ -448,7 +448,7 @@
                 "type": "object",
                 "properties": {
                   "value": {
-                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>\u00b5Sv/h = cpm x conversion_factor</div>",
+                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>µSv/h = cpm x conversion_factor</div>",
                     "type": "number"
                   },
                   "unit": {
@@ -457,13 +457,13 @@
                     "enum": [
                       "cpm",
                       "r/h",
-                      "\u00b5Sv/h",
+                      "µSv/h",
                       "mSv/a",
-                      "\u00b5Sv/a"
+                      "µSv/a"
                     ]
                   },
                   "dead_time": {
-                    "description": "The dead time in \u00b5s. See the description of the value field to see how to use the dead time.",
+                    "description": "The dead time in µs. See the description of the value field to see how to use the dead time.",
                     "type": "number"
                   },
                   "conversion_factor": {
@@ -496,7 +496,7 @@
                 "type": "object",
                 "properties": {
                   "value": {
-                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>\u00b5Sv/h = cpm x conversion_factor</div>",
+                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>µSv/h = cpm x conversion_factor</div>",
                     "type": "number"
                   },
                   "unit": {
@@ -505,13 +505,13 @@
                     "enum": [
                       "cpm",
                       "r/h",
-                      "\u00b5Sv/h",
+                      "µSv/h",
                       "mSv/a",
-                      "\u00b5Sv/a"
+                      "µSv/a"
                     ]
                   },
                   "dead_time": {
-                    "description": "The dead time in \u00b5s. See the description of the value field to see how to use the dead time.",
+                    "description": "The dead time in µs. See the description of the value field to see how to use the dead time.",
                     "type": "number"
                   },
                   "conversion_factor": {
@@ -544,7 +544,7 @@
                 "type": "object",
                 "properties": {
                   "value": {
-                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>\u00b5Sv/h = cpm x conversion_factor</div>",
+                    "description": "Observed counts per minute (ocpm) or actual radiation value. If the value are the observed counts then the dead_time and conversion_factor fields must be defined as well. CPM formula: <div>cpm = ocpm ( 1 + 1 / (1 - ocpm x dead_time) )</div> Conversion formula: <div>µSv/h = cpm x conversion_factor</div>",
                     "type": "number"
                   },
                   "unit": {
@@ -553,13 +553,13 @@
                     "enum": [
                       "cpm",
                       "r/h",
-                      "\u00b5Sv/h",
+                      "µSv/h",
                       "mSv/a",
-                      "\u00b5Sv/a"
+                      "µSv/a"
                     ]
                   },
                   "dead_time": {
-                    "description": "The dead time in \u00b5s. See the description of the value field to see how to use the dead time.",
+                    "description": "The dead time in µs. See the description of the value field to see how to use the dead time.",
                     "type": "number"
                   },
                   "conversion_factor": {
@@ -768,7 +768,7 @@
                         "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
                         "type": "string",
                         "enum": [
-                          "\u00b0"
+                          "°"
                         ]
                       }
                     },
@@ -1126,47 +1126,47 @@
       }
     },
     "membership_plans": {
-        "description": "A list of the different membership plans your hackerspace might have. Set the value according to your billing process. For example, if your membership fee is 10€ per month, but you bill it yearly (aka. the member pays the fee once per year), set the amount to 120 an the billing_interval to yearly.",
-        "type": "array",
-        "items": {
-            "type": "object",
-            "properties": {
-                "name": {
-                    "description": "The name of the membership plan. For example Student Membership, Normal Membership etc.",
-                    "type": "string"
-                },
-                "value": {
-                    "description": "How much does this plan cost?",
-                    "type": "number"
-                },
-                "currency": {
-                    "description": "What's the currency? It should be formatted according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
-                    "type": "string"
-                },
-                "billing_interval": {
-                    "description": "How often is the membership billed? If you select other, please specify in the description what your billing interval is.",
-                    "type": "string",
-                    "enum": [
-                        "yearly",
-                        "monthly",
-                        "weekly",
-                        "daily",
-                        "hourly",
-                        "other"
-                    ]
-                },
-                "description": {
-                    "description": "A free form string.",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "name",
-                "value",
-                "currency",
-                "billing_interval"
+      "description": "A list of the different membership plans your hackerspace might have. Set the value according to your billing process. For example, if your membership fee is 10€ per month, but you bill it yearly (aka. the member pays the fee once per year), set the amount to 120 an the billing_interval to yearly.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The name of the membership plan. For example Student Membership, Normal Membership etc.",
+            "type": "string"
+          },
+          "value": {
+            "description": "How much does this plan cost?",
+            "type": "number"
+          },
+          "currency": {
+            "description": "What's the currency? It should be formatted according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
+            "type": "string"
+          },
+          "billing_interval": {
+            "description": "How often is the membership billed? If you select other, please specify in the description what your billing interval is.",
+            "type": "string",
+            "enum": [
+              "yearly",
+              "monthly",
+              "weekly",
+              "daily",
+              "hourly",
+              "other"
             ]
-        }
+          },
+          "description": {
+            "description": "A free form string.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "value",
+          "currency",
+          "billing_interval"
+        ]
+      }
     }
   },
   "required": [
