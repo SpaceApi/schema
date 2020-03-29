@@ -1125,6 +1125,31 @@
         "type": "string"
       }
     },
+    "links": {
+      "description": "Arbitrary links that you'd like to share",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The link name.",
+            "type": "string"
+          },
+          "description": {
+            "description": "An extra field for a more detailed description of the link.",
+            "type": "string"
+          },
+          "url": {
+            "description": "The URL.",
+            "type": "string"
+          }
+        },
+        "required": [
+            "name",
+            "url"
+        ]
+      }
+    },
     "membership_plans": {
       "description": "A list of the different membership plans your hackerspace might have. Set the value according to your billing process. For example, if your membership fee is 10€ per month, but you bill it yearly (aka. the member pays the fee once per year), set the amount to 120 an the billing_interval to yearly.",
       "type": "array",
