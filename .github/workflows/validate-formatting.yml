@@ -1,0 +1,21 @@
+name: Validate formatting
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  validate-json-schema:
+    name: v${{ matrix.schema }} schema
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        schema: [12, 13, 14-draft]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Reformat JSON with jq
+        run: jq . -M --indent 2 < ${{ matrix.schema }}.json > ${{ matrix.schema }}-formatted.json
+      - name: Check for differences
+        run: diff ${{ matrix.schema }}.json ${{ matrix.schema }}-formatted.json && echo "No differences found!"
