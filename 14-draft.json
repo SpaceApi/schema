@@ -1145,8 +1145,8 @@
           }
         },
         "required": [
-            "name",
-            "url"
+          "name",
+          "url"
         ]
       }
     },
