@@ -71,11 +71,11 @@
         "type": "object",
         "properties": {
           "name": {
-            "description": "Name or other identity of the subject (e.g. <samp>J. Random Hacker</samp>, <samp>fridge</samp>, <samp>3D printer</samp>, \u2026)",
+            "description": "Name or other identity of the subject (e.g. <samp>J. Random Hacker</samp>, <samp>fridge</samp>, <samp>3D printer</samp>, …)",
             "type": "string"
           },
           "type": {
-            "description": "Action (e.g. <samp>check-in</samp>, <samp>check-out</samp>, <samp>finish-print</samp>, \u2026). Define your own actions and use them consistently, canonical actions are not (yet) specified",
+            "description": "Action (e.g. <samp>check-in</samp>, <samp>check-out</samp>, <samp>finish-print</samp>, …). Define your own actions and use them consistently, canonical actions are not (yet) specified",
             "type": "string"
           },
           "t": {
@@ -149,7 +149,7 @@
       ]
     },
     "sensors": {
-      "description": "Data of various sensors in your space (e.g. temperature, humidity, amount of Club-Mate left, \u2026). The only canonical property is the <em>temp</em> property, additional sensor types may be defined by you. In this case, you are requested to share your definition for inclusion in this specification.",
+      "description": "Data of various sensors in your space (e.g. temperature, humidity, amount of Club-Mate left, …). The only canonical property is the <em>temp</em> property, additional sensor types may be defined by you. In this case, you are requested to share your definition for inclusion in this specification.",
       "type": "array",
       "items": {
         "type": "object",
