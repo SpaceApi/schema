@@ -45,6 +45,10 @@
         "timezone": {
           "description": "The timezone the space is located in. It should be formatted according to the <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/List_of_tz_database_time_zones\">TZ database location names</a>.",
           "type": "string"
+        },
+        "area_size": {
+          "description": "The total size of your space in square meters",
+          "type": "number"
         }
       },
       "required": [
