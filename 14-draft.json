@@ -87,24 +87,6 @@
       },
       "minItems": 1
     },
-    "stream": {
-      "description": "A mapping of stream types to stream URLs.If you use other stream types make a <a href=\"add-your-space\" target=\"_blank\">change request</a> or prefix yours with <samp>ext_</samp> .",
-      "type": "object",
-      "properties": {
-        "mp4": {
-          "description": "Your mpg stream URL. Example: <samp>{\"mp4\": \"http//example.org/stream.mpg\"}</samp>",
-          "type": "string"
-        },
-        "mjpeg": {
-          "description": "Your mjpeg stream URL. Example: <samp>{\"mjpeg\": \"http://example.org/stream.mjpeg\"}</samp>",
-          "type": "string"
-        },
-        "ustream": {
-          "description": "Your ustream stream URL. Example: <samp>{\"ustream\": \"http://www.ustream.tv/channel/hackspsps\"}</samp>",
-          "type": "string"
-        }
-      }
-    },
     "state": {
       "description": "A collection of status-related data: actual open/closed status, icons, last change timestamp etc.",
       "type": "object",
@@ -1127,6 +1109,31 @@
       "type": "array",
       "items": {
         "type": "string"
+      }
+    },
+    "links": {
+      "description": "Arbitrary links that you'd like to share",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The link name.",
+            "type": "string"
+          },
+          "description": {
+            "description": "An extra field for a more detailed description of the link.",
+            "type": "string"
+          },
+          "url": {
+            "description": "The URL.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "url"
+        ]
       }
     },
     "membership_plans": {
