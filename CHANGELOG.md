@@ -15,7 +15,7 @@ Changes should start with one of the following tags:
 - [changed] The value in `sensors.account_balance` can now be any ISO 4217 string
 - [added] The `timezone` key was added under `location`
 - [added] The `membership_plans` key was added to represent membership plans a space might have
-- [changed] The unit `hPA` in `sensors.barometer.unit` was renamed to `hPa` to match the SI unit
+- [changed] The unit `hPA` in `sensors.barometer.unit` was deprecated, use `hPa` instead to match the SI unit
 - [added] The `mastodon` key was added under `contact` and to `contact.keymasters` array items
 - [changed] The description of `location.lon` was changed to state the correct direction.
 - [removed] The `google` key was removed from `contact`
