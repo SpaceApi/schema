@@ -254,6 +254,10 @@
         "matrix": {
           "description": "Matrix channel/community for the Hackerspace. Example: <samp>#spaceroom:example.org</samp> or <samp>+spacecommunity:example.org</samp>",
           "type": "string"
+        },
+        "mumble": {
+          "description": "URL to a Mumble server/channel, as specified in <a href=\"https://wiki.mumble.info/wiki/Mumble_URL\" target=\"_blank\">Mumble URL</a>. Example: <samp>mumble://mumble.example.org/spaceroom?version=1.2.0</samp>",
+          "type": "string"
         }
       }
     },
