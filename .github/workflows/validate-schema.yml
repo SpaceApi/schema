@@ -16,8 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install validator
-        run: npm install ajv-cli
-      - name: Download JSON meta-schema
-        run: wget -O meta-schema https://json-schema.org/draft-07/schema
+        run: npm install @stoplight/spectral
       - name: Validate schema file against meta-schema
-        run: npx ajv validate -s meta-schema -d "${{ matrix.schema }}.json" --add-used-schema false --errors=text
+        run: npx spectral --fail-severity hint lint "${{ matrix.schema }}.json"
