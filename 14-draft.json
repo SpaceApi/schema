@@ -1099,6 +1099,43 @@
             "url"
           ]
         }
+    },
+    "mqtt": {
+      "description": "Your open MQTT-Server",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "description": "URL / IP from your open MQTT-Server",
+            "type": "string"
+          },
+          "port": {
+            "description": "Port from your open MQTT-Server",
+            "type": "string"
+          },
+          "Topics": {
+            "description": "Topics to know",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties":{
+                "topic":{
+                  "description": "The topic",
+                  "type": "string"
+                },
+                "topicItem":{
+                  "description": "What is this topic for",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "url",
+          "port"
+        ]
       }
     },
     "projects": {
