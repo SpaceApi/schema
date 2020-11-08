@@ -1,7 +1,7 @@
 {
-  "$id": "https://schema.spaceapi.io/14-draft.json",
+  "$id": "https://schema.spaceapi.io/14.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "SpaceAPI 0.14",
+  "description": "SpaceAPI v14",
   "type": "object",
   "properties": {
     "api_compatibility": {
@@ -11,7 +11,7 @@
         "type": "string"
       },
       "contains": {
-        "const": "0.14"
+        "const": "14"
       }
     },
     "space": {
