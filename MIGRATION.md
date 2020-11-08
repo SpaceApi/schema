@@ -25,8 +25,10 @@ For more information on the new API versioning scheme, check out [pull request #
 
 #### state.open
 
-The `open` field can't have a `null` value anymore, but we've also removed the requirement.
-If you don't want to show your opening status you had to provide this (which you can now completely remove):
+The `open` field can't have a `null` value anymore, but on the other hand the `state` key is now not required anymore.
+
+If previously your endpoint contained this:
+
 ```json
 {
   ...
