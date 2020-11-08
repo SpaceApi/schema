@@ -25,7 +25,7 @@ For more information on the new API versioning scheme, check out [pull request #
 
 #### state.open
 
-The `open` field can't have a `null` value anymore, but on the other hand the `state` key is now not required anymore.
+The `open` field can't have a `null` value anymore, but on the other hand the `state` and the `state.open` keys are not required anymore.
 
 If previously your endpoint contained this:
 
@@ -38,3 +38,5 @@ If previously your endpoint contained this:
   ...
 }
 ```
+
+...you can simply remove the `state.open` key or the entire `state` key to be compatible with v14.
