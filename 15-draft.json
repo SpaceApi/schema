@@ -1,7 +1,7 @@
 {
   "$id": "https://schema.spaceapi.io/15-draft.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "SpaceAPI 15",
+  "description": "SpaceAPI v15 (Draft)",
   "type": "object",
   "properties": {
     "api_compatibility": {
