@@ -12,7 +12,7 @@ Changes should start with one of the following tags:
 
 - [added] The `api_compatibility` field was added
 - [added] The `contact.keymasters` array items can also contain a `xmpp` field
-- [added] The `contact.mumble` array items can also contain a `mumble` field
+- [added] The `mumble` contact option was added
 - [added] The `links` section was added
 - [added] The `mastodon` key was added under `contact` and to `contact.keymasters` array items
 - [added] The `membership_plans` key was added to represent membership plans a space might have
@@ -25,7 +25,7 @@ Changes should start with one of the following tags:
 - [changed] The unit `hPA` in `sensors.barometer.unit` was deprecated, use `hPa` instead to match the SI unit
 - [changed] The keys `state` and `state.open` are not required anymore and `state.open` is no longer nullable.
 
-- [removed] The `api` key was removed
+- [removed] The `api` key was removed (replaced with `api_compatibility`, see #56 for details)
 - [removed] The `cache` key was removed
 - [removed] The `google` key was removed from `contact`
 - [removed] The `issue_report_channel` key was removed
