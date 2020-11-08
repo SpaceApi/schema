@@ -57,22 +57,17 @@
       "type": "object",
       "properties": {
         "spacenet": {
-          "description": "See the <a target=\"_blank\" href=\"https://spacefed.net/wiki/index.php/Category:Howto/Spacenet\">wiki</a>.",
+          "description": "See the <a target=\"_blank\" href=\"https://spacefed.net/index.php/Category:Howto/Spacenet\">wiki</a>.",
           "type": "boolean"
         },
         "spacesaml": {
-          "description": "See the <a target=\"_blank\" href=\"https://spacefed.net/wiki/index.php/Category:Howto/Spacesaml\">wiki</a>.",
-          "type": "boolean"
-        },
-        "spacephone": {
-          "description": "See the <a target=\"_blank\" href=\"https://spacefed.net/wiki/index.php/Category:Howto/Spacephone\">wiki</a>.",
+          "description": "See the <a target=\"_blank\" href=\"https://spacefed.net/index.php?title=Spacesaml\">wiki</a>.",
           "type": "boolean"
         }
       },
       "required": [
         "spacenet",
-        "spacesaml",
-        "spacephone"
+        "spacesaml"
       ]
     },
     "cam": {
