@@ -28,3 +28,4 @@ Changes should start with one of the following tags:
 - [added] The `api_compatibility` field was added
 - [added] The `network_traffic` sensor was added
 - [added] The `links` section was added
+- [added] The `mqtt` section was added
