@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install validator
-        run: npm install ajv-cli
+        run: npm install ajv-cli@3.1.0
       - name: Download JSON meta-schema
         run: wget -O meta-schema https://json-schema.org/draft-07/schema
       - name: Validate schema file against meta-schema
