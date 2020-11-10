@@ -28,7 +28,7 @@ Changes should start with one of the following tags:
 - [removed] The `api` key was removed (replaced with `api_compatibility`, see #56 for details)
 - [removed] The `cache` key was removed
 - [removed] The `google` key was removed from `contact`
-- [removed] The `issue_report_channel` key was removed
+- [removed] The `issue_report_channels` key was removed
 - [removed] The `radio_show` key was removed
 - [removed] The `spacefed.spacephone` key was removed
 - [removed] The `stream` key was removed
