@@ -149,7 +149,7 @@
       }
     },
     "contact": {
-      "description": "Contact information about your space. You must define at least one which is in the list of allowed values of the issue_report_channels field.",
+      "description": "Contact information about your space.",
       "type": "object",
       "properties": {
         "phone": {
