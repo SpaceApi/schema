@@ -10,25 +10,66 @@ Changes should start with one of the following tags:
 
 ## v14
 
+Root level:
+
 - [added] The `api_compatibility` field was added
-- [added] The `contact.keymasters` array items can also contain a `xmpp` field
-- [added] The `mumble` contact option was added
-- [added] The `links` section was added
-- [added] The `mastodon` key was added under `contact` and to `contact.keymasters` array items
-- [added] The `membership_plans` key was added to represent membership plans a space might have
-- [added] The `network_traffic` sensor was added
-- [added] The `timezone` key was added under `location`
+- [added] The `links` section was added ([#67])
+- [added] The `membership_plans` key was added to represent membership plans a space might have ([#15], [#27])
+- [removed] The `api` key was removed (replaced with `api_compatibility`, see [#56] for details)
+- [removed] The `cache` key was removed ([#46])
+- [removed] The `stream` key was removed ([#70])
+- [removed] The `issue_report_channels` key was removed ([#47])
+- [removed] The `radio_show` key was removed ([#48])
 
-- [changed] The `jabber` key under `contact` was renamed to `xmpp`
-- [changed] The description of `location.lon` was changed to state the correct direction.
-- [changed] The value in `sensors.account_balance` can now be any ISO 4217 string
-- [changed] The unit `hPA` in `sensors.barometer.unit` was deprecated, use `hPa` instead to match the SI unit
-- [changed] The keys `state` and `state.open` are not required anymore and `state.open` is no longer nullable.
+`contact`:
 
-- [removed] The `api` key was removed (replaced with `api_compatibility`, see #56 for details)
-- [removed] The `cache` key was removed
-- [removed] The `google` key was removed from `contact`
-- [removed] The `issue_report_channels` key was removed
-- [removed] The `radio_show` key was removed
-- [removed] The `spacefed.spacephone` key was removed
-- [removed] The `stream` key was removed
+- [changed] The `jabber` key was renamed to `xmpp`[#8]
+- [added] The `keymasters` array items can also contain a `xmpp` field ([#8])
+- [added] The `mumble` contact option was added ([#77])
+- [added] The `matrix` contact option was added ([#44])
+- [added] The `mastodon` key was added to `contact` and `contact.keymasters` ([#26])
+- [added] The `gopher` contact option was added ([#24], [#31])
+- [removed] The `google` key was removed ([#37])
+
+`location`:
+
+- [added] The `timezone` key was added ([#13])
+- [changed] The description of `location.lon` was fixed ([#28])
+
+`sensors`:
+
+- [added] The `network_traffic` sensor was added ([#60])
+- [changed] The unit in `account_balance` can now be any ISO 4217 string ([#12])
+- [changed] The unit `hPA` in `barometer.unit` was deprecated, use `hPa` instead to match the SI unit ([#7], [#72])
+
+`spacefed`:
+
+- [removed] The `spacephone` key was removed ([#80])
+
+`state`:
+
+- [changed] The keys `state` and `state.open` are not required anymore and `state.open` is no longer nullable
+
+
+[#7]: https://github.com/SpaceApi/schema/pull/7
+[#8]: https://github.com/SpaceApi/schema/pull/8
+[#12]: https://github.com/SpaceApi/schema/pull/12
+[#13]: https://github.com/SpaceApi/schema/pull/13
+[#15]: https://github.com/SpaceApi/schema/pull/15
+[#24]: https://github.com/SpaceApi/schema/pull/24
+[#26]: https://github.com/SpaceApi/schema/pull/26
+[#27]: https://github.com/SpaceApi/schema/pull/27
+[#28]: https://github.com/SpaceApi/schema/pull/28
+[#31]: https://github.com/SpaceApi/schema/pull/31
+[#37]: https://github.com/SpaceApi/schema/pull/37
+[#44]: https://github.com/SpaceApi/schema/pull/44
+[#46]: https://github.com/SpaceApi/schema/pull/46
+[#47]: https://github.com/SpaceApi/schema/pull/47
+[#48]: https://github.com/SpaceApi/schema/pull/48
+[#56]: https://github.com/SpaceApi/schema/pull/56
+[#60]: https://github.com/SpaceApi/schema/pull/60
+[#67]: https://github.com/SpaceApi/schema/pull/67
+[#70]: https://github.com/SpaceApi/schema/pull/70
+[#72]: https://github.com/SpaceApi/schema/pull/72
+[#77]: https://github.com/SpaceApi/schema/pull/77
+[#80]: https://github.com/SpaceApi/schema/pull/80
