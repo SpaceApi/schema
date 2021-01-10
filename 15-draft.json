@@ -1174,6 +1174,22 @@
           "billing_interval"
         ]
       }
+    },
+    "linked_spaces": {
+      "description": "A list of spaces you know and feel connected too.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "description": "The space's website according to their SpaceAPI endpoint",
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
     }
   },
   "required": [
