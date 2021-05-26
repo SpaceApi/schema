@@ -83,7 +83,7 @@
       "type": "object",
       "properties": {
         "open": {
-          "description": "A flag which indicates whether the space is currently open or closed. The state 'undefined' can be achieved by omitting this field. A missing 'open' property carries the semantics of a temporary unavailability of the state, whereas the absence of the 'state' property itself means the state is generally not implemented for this space. This field is also allowed to explicitly have the value null for backwards compatibility with older schema versions.",
+          "description": "A flag which indicates whether the space is currently open or closed. The state 'undefined' can be achieved by omitting this field. A missing 'open' property carries the semantics of a temporary unavailability of the state, whereas the absence of the 'state' property itself means the state is generally not implemented for this space. This field is also allowed to explicitly have the value null for backwards compatibility with older schema versions, but this is deprecated and will be removed in a future version.",
           "type": [
             "boolean",
             "null"
