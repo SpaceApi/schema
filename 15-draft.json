@@ -1181,13 +1181,16 @@
       "items": {
         "type": "object",
         "properties": {
+          "endpoint": {
+            "description": "The SpaceAPI endpoint of the space",
+            "type": "string"
+          },
           "url": {
-            "description": "The space's website according to their SpaceAPI endpoint",
+            "description": "The website of the space",
             "type": "string"
           }
         },
         "required": [
-          "url"
         ]
       }
     }
