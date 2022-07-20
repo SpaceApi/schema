@@ -297,7 +297,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -331,7 +331,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -372,7 +372,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -429,7 +429,7 @@
                     "type": "string"
                   },
                   "lastchange": {
-                    "description": "The Unix timestamp when the sensor value changed most recently",
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                     "type": "number"
                   }
                 },
@@ -481,7 +481,7 @@
                     "type": "string"
                   },
                   "lastchange": {
-                    "description": "The Unix timestamp when the sensor value changed most recently",
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                     "type": "number"
                   }
                 },
@@ -533,7 +533,7 @@
                     "type": "string"
                   },
                   "lastchange": {
-                    "description": "The Unix timestamp when the sensor value changed most recently",
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                     "type": "number"
                   }
                 },
@@ -585,7 +585,7 @@
                     "type": "string"
                   },
                   "lastchange": {
-                    "description": "The Unix timestamp when the sensor value changed most recently",
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                     "type": "number"
                   }
                 },
@@ -627,7 +627,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -669,7 +669,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -711,7 +711,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -841,7 +841,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -903,7 +903,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -939,7 +939,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -972,7 +972,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -1012,7 +1012,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
@@ -1078,7 +1078,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp when the sensor value changed most recently",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
                 "type": "number"
               }
             },
