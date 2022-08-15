@@ -295,6 +295,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -325,6 +329,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -362,6 +370,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -415,6 +427,10 @@
                   "description": {
                     "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                     "type": "string"
+                  },
+                  "lastchange": {
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                    "type": "number"
                   }
                 },
                 "required": [
@@ -463,6 +479,10 @@
                   "description": {
                     "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                     "type": "string"
+                  },
+                  "lastchange": {
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                    "type": "number"
                   }
                 },
                 "required": [
@@ -511,6 +531,10 @@
                   "description": {
                     "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                     "type": "string"
+                  },
+                  "lastchange": {
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                    "type": "number"
                   }
                 },
                 "required": [
@@ -559,6 +583,10 @@
                   "description": {
                     "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                     "type": "string"
+                  },
+                  "lastchange": {
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                    "type": "number"
                   }
                 },
                 "required": [
@@ -597,6 +625,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -635,6 +667,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -673,6 +709,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -799,6 +839,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -857,6 +901,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -889,6 +937,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -918,6 +970,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -954,6 +1010,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance.",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
@@ -1016,6 +1076,10 @@
               "description": {
                 "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "type": "number"
               }
             },
             "required": [
