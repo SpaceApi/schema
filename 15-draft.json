@@ -87,7 +87,7 @@
           "type": "boolean"
         },
         "lastchange": {
-          "description": "The Unix timestamp when the space status changed most recently",
+          "description": "The Unix timestamp (in seconds) when the space status changed most recently.",
           "type": "number"
         },
         "trigger_person": {
@@ -138,7 +138,7 @@
             "type": "string"
           },
           "timestamp": {
-            "description": "Unix timestamp when the event occurred",
+            "description": "The Unix timestamp (in seconds) when the event occurred.",
             "type": "number"
           },
           "extra": {
