@@ -91,7 +91,7 @@
           "type": "boolean"
         },
         "lastchange": {
-          "description": "The Unix timestamp (in seconds) when the space status changed most recently.",
+          "description": "The Unix timestamp (in seconds) when the space status changed most recently",
           "type": "number"
         },
         "trigger_person": {
@@ -199,7 +199,7 @@
                 "type": "string"
               },
               "twitter": {
-                "description": "Twitter username with leading <samp>@</samp>.",
+                "description": "Twitter username with leading <code>@</code>",
                 "type": "string",
                 "examples": [
                   "@space_api"
@@ -227,14 +227,14 @@
           }
         },
         "irc": {
-          "description": "URL of the IRC channel, in the form <samp>irc://example.org/#channelname</samp>",
+          "description": "URL of the IRC channel",
           "type": "string",
           "examples": [
             "irc://example.org/#channelname"
           ]
         },
         "twitter": {
-          "description": "Twitter username with leading <samp>@</samp>.",
+          "description": "Twitter username with leading <code>@</code>",
           "type": "string",
           "examples": [
             "@space_api"
@@ -342,11 +342,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -381,11 +381,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -427,11 +427,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -457,7 +457,7 @@
                     "type": "number"
                   },
                   "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
+                    "description": "Choose the appropriate unit for your radiation sensor instance",
                     "type": "string",
                     "enum": [
                       "cpm",
@@ -489,11 +489,11 @@
                     "type": "string"
                   },
                   "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                    "description": "An extra field that you can use to attach some additional information to this sensor instance",
                     "type": "string"
                   },
                   "lastchange": {
-                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                     "type": "number"
                   }
                 },
@@ -514,7 +514,7 @@
                     "type": "number"
                   },
                   "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
+                    "description": "Choose the appropriate unit for your radiation sensor instance",
                     "type": "string",
                     "enum": [
                       "cpm",
@@ -546,11 +546,11 @@
                     "type": "string"
                   },
                   "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                    "description": "An extra field that you can use to attach some additional information to this sensor instance",
                     "type": "string"
                   },
                   "lastchange": {
-                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                     "type": "number"
                   }
                 },
@@ -571,7 +571,7 @@
                     "type": "number"
                   },
                   "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
+                    "description": "Choose the appropriate unit for your radiation sensor instance",
                     "type": "string",
                     "enum": [
                       "cpm",
@@ -603,11 +603,11 @@
                     "type": "string"
                   },
                   "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                    "description": "An extra field that you can use to attach some additional information to this sensor instance",
                     "type": "string"
                   },
                   "lastchange": {
-                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                     "type": "number"
                   }
                 },
@@ -628,7 +628,7 @@
                     "type": "number"
                   },
                   "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
+                    "description": "Choose the appropriate unit for your radiation sensor instance",
                     "type": "string",
                     "enum": [
                       "cpm",
@@ -660,11 +660,11 @@
                     "type": "string"
                   },
                   "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                    "description": "An extra field that you can use to attach some additional information to this sensor instance",
                     "type": "string"
                   },
                   "lastchange": {
-                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                    "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                     "type": "number"
                   }
                 },
@@ -707,11 +707,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -733,7 +733,7 @@
                 "type": "number"
               },
               "unit": {
-                "description": "The unit, either <samp>btl</samp> for bottles or <samp>crt</samp> for crates.",
+                "description": "The unit, either <samp>btl</samp> for bottles or <samp>crt</samp> for crates",
                 "type": "string",
                 "enum": [
                   "btl",
@@ -755,11 +755,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -770,7 +770,7 @@
           }
         },
         "power_consumption": {
-          "description": "The power consumption of a specific device or of your whole space.",
+          "description": "The power consumption of a specific device or of your whole space",
           "type": "array",
           "items": {
             "type": "object",
@@ -801,11 +801,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -817,7 +817,7 @@
           }
         },
         "wind": {
-          "description": "Your wind sensor.",
+          "description": "Your wind sensor",
           "type": "array",
           "items": {
             "type": "object",
@@ -873,7 +873,7 @@
                     ]
                   },
                   "direction": {
-                    "description": "The wind direction in degrees.",
+                    "description": "The wind direction in degrees",
                     "type": "object",
                     "properties": {
                       "value": {
@@ -894,7 +894,7 @@
                     ]
                   },
                   "elevation": {
-                    "description": "Height above mean sea level.",
+                    "description": "Height above mean sea level",
                     "type": "object",
                     "properties": {
                       "value": {
@@ -935,11 +935,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -950,7 +950,7 @@
           }
         },
         "network_connections": {
-          "description": "This sensor type is to specify the currently active  ethernet or wireless network devices. You can create different instances for each network type.",
+          "description": "This sensor type is to specify the currently active ethernet or wireless network devices. You can create different instances for each network type.",
           "type": "array",
           "items": {
             "type": "object",
@@ -1001,11 +1001,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -1037,11 +1037,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -1070,11 +1070,11 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -1110,11 +1110,11 @@
                 "minItems": 1
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -1180,7 +1180,7 @@
                 "type": "string"
               },
               "lastchange": {
-                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently.",
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
                 "type": "number"
               }
             },
@@ -1201,7 +1201,7 @@
           "type": "object",
           "properties": {
             "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
+              "description": "Type of the feed",
               "type": "string",
               "examples": [
                 "rss",
@@ -1223,7 +1223,7 @@
           "type": "object",
           "properties": {
             "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
+              "description": "Type of the feed",
               "type": "string",
               "examples": [
                 "rss",
@@ -1245,7 +1245,7 @@
           "type": "object",
           "properties": {
             "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
+              "description": "Type of the feed",
               "type": "string",
               "examples": [
                 "rss",
@@ -1267,7 +1267,7 @@
           "type": "object",
           "properties": {
             "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
+              "description": "Type of the feed",
               "type": "string",
               "examples": [
                 "rss",
@@ -1304,7 +1304,7 @@
             "type": "string"
           },
           "description": {
-            "description": "An extra field for a more detailed description of the link.",
+            "description": "An extra field for a more detailed description of the link",
             "type": "string"
           },
           "url": {
