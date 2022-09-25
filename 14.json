@@ -44,7 +44,11 @@
         },
         "timezone": {
           "description": "The timezone the space is located in. It should be formatted according to the <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/List_of_tz_database_time_zones\">TZ database location names</a>.",
-          "type": "string"
+          "type": "string",
+          "examples": [
+            "Europe/Kyiv",
+            "Antarctica/Palmer"
+          ]
         }
       },
       "required": [
@@ -94,7 +98,7 @@
           "type": "number"
         },
         "trigger_person": {
-          "description": "The person who lastly changed the state e.g. opened or closed the space.",
+          "description": "The person who lastly changed the state e.g. opened or closed the space",
           "type": "string"
         },
         "message": {
@@ -152,16 +156,23 @@
       }
     },
     "contact": {
-      "description": "Contact information about your space.",
+      "description": "Contact information about your space",
       "type": "object",
       "properties": {
         "phone": {
-          "description": "Phone number, including country code with a leading plus sign. Example: <samp>+1 800 555 4567</samp>",
-          "type": "string"
+          "description": "Phone number, including country code with a leading plus sign",
+          "type": "string",
+          "examples": [
+            "+1 800 555 4567",
+            "+41 79 123 45 67"
+          ]
         },
         "sip": {
-          "description": "URI for Voice-over-IP via SIP. Example: <samp>sip:yourspace@sip.example.org</samp>",
-          "type": "string"
+          "description": "URI for Voice-over-IP via SIP",
+          "type": "string",
+          "examples": [
+            "sip:yourspace@sip.example.org"
+          ]
         },
         "keymasters": {
           "description": "Persons who carry a key and are able to open the space upon request. One of the fields irc_nick, phone, email or twitter must be specified.",
@@ -179,46 +190,68 @@
                 "type": "string"
               },
               "phone": {
-                "description": "Example: <samp>['+1 800 555 4567','+1 800 555 4544']</samp>",
-                "type": "string"
+                "description": "Phone number, including country code with a leading plus sign",
+                "type": "string",
+                "examples": [
+                  "+1 800 555 4567",
+                  "+41 79 123 45 67"
+                ]
               },
               "email": {
-                "description": "Email address which can be base64 encoded.",
+                "description": "Email address which can be base64 encoded",
                 "type": "string"
               },
               "twitter": {
-                "description": "Twitter username with leading <samp>@</samp>.",
-                "type": "string"
+                "description": "Twitter username with leading <code>@</code>",
+                "type": "string",
+                "examples": [
+                  "@space_api"
+                ]
               },
               "xmpp": {
                 "description": "XMPP (Jabber) ID",
                 "type": "string"
               },
               "mastodon": {
-                "description": "Mastodon username. Example: @ordnung@chaos.social",
-                "type": "string"
+                "description": "Mastodon username",
+                "type": "string",
+                "examples": [
+                  "@ordnung@chaos.social"
+                ]
               },
               "matrix": {
-                "description": "Matrix username. Example: <samp>@user:example.org</samp>",
-                "type": "string"
+                "description": "Matrix username (including domain)",
+                "type": "string",
+                "examples": [
+                  "@user:example.org"
+                ]
               }
             }
           }
         },
         "irc": {
-          "description": "URL of the IRC channel, in the form <samp>irc://example.org/#channelname</samp>",
-          "type": "string"
+          "description": "URL of the IRC channel",
+          "type": "string",
+          "examples": [
+            "irc://example.org/#channelname"
+          ]
         },
         "twitter": {
-          "description": "Twitter handle, with leading @",
-          "type": "string"
+          "description": "Twitter username with leading <code>@</code>",
+          "type": "string",
+          "examples": [
+            "@space_api"
+          ]
         },
         "mastodon": {
-          "description": "Mastodon username: Example: @ordnung@chaos.social.",
-          "type": "string"
+          "description": "Mastodon username",
+          "type": "string",
+          "examples": [
+            "@ordnung@chaos.social"
+          ]
         },
         "facebook": {
-          "description": "Facebook account URL.",
+          "description": "Facebook account URL",
           "type": "string"
         },
         "identica": {
@@ -226,7 +259,7 @@
           "type": "string"
         },
         "foursquare": {
-          "description": "Foursquare ID, in the form <samp>4d8a9114d85f3704eab301dc</samp>.",
+          "description": "Foursquare ID, in the form <samp>4d8a9114d85f3704eab301dc</samp>",
           "type": "string"
         },
         "email": {
@@ -246,16 +279,26 @@
           "type": "string"
         },
         "gopher": {
-          "description": "A URL to find information about the Space in the Gopherspace. Example: gopher://gopher.binary-kitchen.de",
-          "type": "string"
+          "description": "A URL to find information about the Space in the Gopherspace",
+          "type": "string",
+          "examples": [
+            "gopher://gopher.binary-kitchen.de"
+          ]
         },
         "matrix": {
-          "description": "Matrix channel/community for the Hackerspace. Example: <samp>#spaceroom:example.org</samp> or <samp>+spacecommunity:example.org</samp>",
-          "type": "string"
+          "description": "Matrix channel/community for the Hackerspace",
+          "type": "string",
+          "examples": [
+            "#spaceroom:example.org",
+            "+spacecommunity:example.org"
+          ]
         },
         "mumble": {
-          "description": "URL to a Mumble server/channel, as specified in https://wiki.mumble.info/wiki/Mumble_URL . Example: <samp>mumble://mumble.example.org/spaceroom?version=1.2.0</samp>",
-          "type": "string"
+          "description": "URL to a Mumble server/channel, as specified in https://wiki.mumble.info/wiki/Mumble_URL",
+          "type": "string",
+          "examples": [
+            "mumble://mumble.example.org/spaceroom?version=1.2.0"
+          ]
         }
       }
     },
@@ -274,7 +317,7 @@
                 "type": "number"
               },
               "unit": {
-                "description": "The unit of the sensor value.",
+                "description": "The unit of the sensor value",
                 "type": "string",
                 "enum": [
                   "°C",
@@ -288,15 +331,21 @@
                 ]
               },
               "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Outside",
+                  "Inside",
+                  "Ceiling",
+                  "Room 1"
+                ]
               },
               "name": {
                 "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -308,7 +357,7 @@
           }
         },
         "door_locked": {
-          "description": "Sensor type to indicate if a certain door is locked.",
+          "description": "Sensor type to indicate if a certain door is locked",
           "type": "array",
           "items": {
             "type": "object",
@@ -318,15 +367,20 @@
                 "type": "boolean"
               },
               "location": {
-                "description": "The location of your sensor such as <samp>front door</samp>, <samp>chill room</samp> or <samp>lab</samp>.",
-                "type": "string"
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Front door",
+                  "Chill room",
+                  "Lab"
+                ]
               },
               "name": {
                 "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -355,15 +409,20 @@
                 ]
               },
               "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Outside",
+                  "Inside",
+                  "Lab"
+                ]
               },
               "name": {
                 "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -389,7 +448,7 @@
                     "type": "number"
                   },
                   "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
+                    "description": "Choose the appropriate unit for your radiation sensor instance",
                     "type": "string",
                     "enum": [
                       "cpm",
@@ -408,15 +467,20 @@
                     "type": "number"
                   },
                   "location": {
-                    "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                    "type": "string"
+                    "description": "The location of your sensor",
+                    "type": "string",
+                    "examples": [
+                      "Outside",
+                      "Roof",
+                      "Lab"
+                    ]
                   },
                   "name": {
                     "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                     "type": "string"
                   },
                   "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                    "description": "An extra field that you can use to attach some additional information to this sensor instance",
                     "type": "string"
                   }
                 },
@@ -437,7 +501,7 @@
                     "type": "number"
                   },
                   "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
+                    "description": "Choose the appropriate unit for your radiation sensor instance",
                     "type": "string",
                     "enum": [
                       "cpm",
@@ -456,15 +520,20 @@
                     "type": "number"
                   },
                   "location": {
-                    "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                    "type": "string"
+                    "description": "The location of your sensor",
+                    "type": "string",
+                    "examples": [
+                      "Outside",
+                      "Roof",
+                      "Lab"
+                    ]
                   },
                   "name": {
                     "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                     "type": "string"
                   },
                   "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                    "description": "An extra field that you can use to attach some additional information to this sensor instance",
                     "type": "string"
                   }
                 },
@@ -485,7 +554,7 @@
                     "type": "number"
                   },
                   "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
+                    "description": "Choose the appropriate unit for your radiation sensor instance",
                     "type": "string",
                     "enum": [
                       "cpm",
@@ -504,15 +573,20 @@
                     "type": "number"
                   },
                   "location": {
-                    "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                    "type": "string"
+                    "description": "The location of your sensor",
+                    "type": "string",
+                    "examples": [
+                      "Outside",
+                      "Roof",
+                      "Lab"
+                    ]
                   },
                   "name": {
                     "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                     "type": "string"
                   },
                   "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                    "description": "An extra field that you can use to attach some additional information to this sensor instance",
                     "type": "string"
                   }
                 },
@@ -533,7 +607,7 @@
                     "type": "number"
                   },
                   "unit": {
-                    "description": "Choose the appropriate unit for your radiation sensor instance.",
+                    "description": "Choose the appropriate unit for your radiation sensor instance",
                     "type": "string",
                     "enum": [
                       "cpm",
@@ -552,15 +626,20 @@
                     "type": "number"
                   },
                   "location": {
-                    "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                    "type": "string"
+                    "description": "The location of your sensor",
+                    "type": "string",
+                    "examples": [
+                      "Outside",
+                      "Roof",
+                      "Lab"
+                    ]
                   },
                   "name": {
                     "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                     "type": "string"
                   },
                   "description": {
-                    "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                    "description": "An extra field that you can use to attach some additional information to this sensor instance",
                     "type": "string"
                   }
                 },
@@ -590,15 +669,20 @@
                 ]
               },
               "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Outside",
+                  "Roof",
+                  "Lab"
+                ]
               },
               "name": {
                 "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -620,7 +704,7 @@
                 "type": "number"
               },
               "unit": {
-                "description": "The unit, either <samp>btl</samp> for bottles or <samp>crt</samp> for crates.",
+                "description": "The unit, either <samp>btl</samp> for bottles or <samp>crt</samp> for crates",
                 "type": "string",
                 "enum": [
                   "btl",
@@ -628,15 +712,21 @@
                 ]
               },
               "location": {
-                "description": "The location of your sensor such as <samp>Room 1</samp> or <samp>Room 2</samp> or <samp>Room 3</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Entrance",
+                  "Room 1",
+                  "Fridge 3",
+                  "Lab"
+                ]
               },
               "name": {
                 "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -647,7 +737,7 @@
           }
         },
         "power_consumption": {
-          "description": "The power consumption of a specific device or of your whole space.",
+          "description": "The power consumption of a specific device or of your whole space",
           "type": "array",
           "items": {
             "type": "object",
@@ -666,15 +756,19 @@
                 ]
               },
               "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Room 1",
+                  "Lab"
+                ]
               },
               "name": {
                 "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -686,7 +780,7 @@
           }
         },
         "wind": {
-          "description": "Your wind sensor.",
+          "description": "Your wind sensor",
           "type": "array",
           "items": {
             "type": "object",
@@ -742,7 +836,7 @@
                     ]
                   },
                   "direction": {
-                    "description": "The wind direction in degrees.",
+                    "description": "The wind direction in degrees",
                     "type": "object",
                     "properties": {
                       "value": {
@@ -763,7 +857,7 @@
                     ]
                   },
                   "elevation": {
-                    "description": "Height above mean sea level.",
+                    "description": "Height above mean sea level",
                     "type": "object",
                     "properties": {
                       "value": {
@@ -792,15 +886,19 @@
                 ]
               },
               "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Roof",
+                  "Entrance"
+                ]
               },
               "name": {
                 "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -811,7 +909,7 @@
           }
         },
         "network_connections": {
-          "description": "This sensor type is to specify the currently active  ethernet or wireless network devices. You can create different instances for each network type.",
+          "description": "This sensor type is to specify the currently active ethernet or wireless network devices. You can create different instances for each network type.",
           "type": "array",
           "items": {
             "type": "object",
@@ -850,15 +948,19 @@
                 }
               },
               "location": {
-                "description": "The location of your sensor such as <samp>Outside</samp>, <samp>Inside</samp>, <samp>Ceiling</samp>, <samp>Roof</samp> or <samp>Room 1</samp>.",
-                "type": "string"
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Lab",
+                  "Room 1"
+                ]
               },
               "name": {
                 "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -890,7 +992,7 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -919,7 +1021,7 @@
                 "type": "string"
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -955,7 +1057,7 @@
                 "minItems": 1
               },
               "description": {
-                "description": "An extra field that you can use to attach some additional information to this sensor instance.",
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
                 "type": "string"
               }
             },
@@ -1038,8 +1140,13 @@
           "type": "object",
           "properties": {
             "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
-              "type": "string"
+              "description": "Type of the feed",
+              "type": "string",
+              "examples": [
+                "rss",
+                "atom",
+                "ical"
+              ]
             },
             "url": {
               "description": "Feed URL",
@@ -1055,8 +1162,13 @@
           "type": "object",
           "properties": {
             "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
-              "type": "string"
+              "description": "Type of the feed",
+              "type": "string",
+              "examples": [
+                "rss",
+                "atom",
+                "ical"
+              ]
             },
             "url": {
               "description": "Feed URL",
@@ -1072,8 +1184,13 @@
           "type": "object",
           "properties": {
             "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
-              "type": "string"
+              "description": "Type of the feed",
+              "type": "string",
+              "examples": [
+                "rss",
+                "atom",
+                "ical"
+              ]
             },
             "url": {
               "description": "Feed URL",
@@ -1089,8 +1206,13 @@
           "type": "object",
           "properties": {
             "type": {
-              "description": "Type of the feed, for example <samp>rss</samp>, <samp>atom</atom>, <samp>ical</samp>",
-              "type": "string"
+              "description": "Type of the feed",
+              "type": "string",
+              "examples": [
+                "rss",
+                "atom",
+                "ical"
+              ]
             },
             "url": {
               "description": "Feed URL",
@@ -1117,15 +1239,15 @@
         "type": "object",
         "properties": {
           "name": {
-            "description": "The link name.",
+            "description": "The link name",
             "type": "string"
           },
           "description": {
-            "description": "An extra field for a more detailed description of the link.",
+            "description": "An extra field for a more detailed description of the link",
             "type": "string"
           },
           "url": {
-            "description": "The URL.",
+            "description": "The URL",
             "type": "string"
           }
         },
@@ -1142,8 +1264,12 @@
         "type": "object",
         "properties": {
           "name": {
-            "description": "The name of the membership plan. For example Student Membership, Normal Membership etc.",
-            "type": "string"
+            "description": "The name of the membership plan",
+            "type": "string",
+            "examples": [
+              "Student Membership",
+              "Normal Membership"
+            ]
           },
           "value": {
             "description": "How much does this plan cost?",
@@ -1151,7 +1277,12 @@
           },
           "currency": {
             "description": "What's the currency? It should be formatted according to <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">ISO 4217</a> short-code format.",
-            "type": "string"
+            "type": "string",
+            "examples": [
+              "EUR",
+              "USD",
+              "CHF"
+            ]
           },
           "billing_interval": {
             "description": "How often is the membership billed? If you select other, please specify in the description what your billing interval is.",
@@ -1166,7 +1297,7 @@
             ]
           },
           "description": {
-            "description": "A free form string.",
+            "description": "A free form string",
             "type": "string"
           }
         },
