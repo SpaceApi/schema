@@ -27,7 +27,7 @@
       "type": "string"
     },
     "location": {
-      "description": "Position data such as a postal address or geographic coordinates",
+      "description": "Position data such as a postal address or geographic coordinates. May be omitted for spaces without a fixed physical location.",
       "type": "object",
       "properties": {
         "address": {
@@ -1444,7 +1444,6 @@
     "space",
     "logo",
     "url",
-    "location",
     "contact"
   ]
 }
