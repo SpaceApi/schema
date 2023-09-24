@@ -18,6 +18,15 @@
       "description": "The name of your space",
       "type": "string"
     },
+    "type": {
+      "description": "The type of your space. Clients MUST treat a missing <code>type</code> field as if it were set to <code>space</code>. <code>space</code>: A hacker- or makerspace. For endpoints with <code>\"type\": \"space\"</code>, the <code>location</code> is mandatory. <code>hub</code>: An association of multiple people or spaces, which does not have a physical location itself.  Examples of hubs could be umbrella organizations or groups without a single hacker- or makerspace.",
+      "type": "string",
+      "default": "space",
+      "enum": [
+        "space",
+        "hub"
+      ]
+    },
     "logo": {
       "description": "URL to your space logo",
       "type": "string"
@@ -1392,7 +1401,22 @@
     "space",
     "logo",
     "url",
-    "location",
     "contact"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "space"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "location"
+        ]
+      }
+    }
   ]
 }
