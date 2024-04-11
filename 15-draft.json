@@ -66,6 +66,44 @@
             "Ring the doorbell marked with HACKSPACE",
             "Knock three times, say Shibboleet and follow the white rabbit"
           ]
+        },
+        "areas": {
+          "description": "A list of areas in your space. Must include at least 1 area if defined.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of this area",
+                "examples": [
+                  "Hackerspace",
+                  "Kitchen",
+                  "Workshop"
+                ]
+              },
+              "description": {
+                "type": "string",
+                "description": "A description of this area",
+                "examples": [
+                  "Our hackerspace area",
+                  "Woodworking machines and power tools"
+                ]
+              },
+              "square_meters": {
+                "type": "number",
+                "description": "The size of this area in square meters",
+                "examples": [
+                  23.23,
+                  42
+                ]
+              }
+            },
+            "required": [
+              "square_meters"
+            ]
+          },
+          "minItems": 1
         }
       },
       "required": [
