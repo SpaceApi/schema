@@ -12,8 +12,8 @@ Changes should start with one of the following tags:
 
 `sensors`:
 
-- [removed] The deprecated unit `hPA` in `barometer.unit` was removed, use `hPa` instead
-- [removed] The redundant unit `mW` in `power_consumption.unit` was removed, use `W` instead
+- [removed] The deprecated unit `hPA` in `barometer.unit` was removed, use `hPa` instead ([#109])
+- [removed] The redundant unit `mW` in `power_consumption.unit` was removed, use `W` instead ([#109])
 
 ## v14
 
@@ -80,3 +80,4 @@ Root level:
 [#72]: https://github.com/SpaceApi/schema/pull/72
 [#77]: https://github.com/SpaceApi/schema/pull/77
 [#80]: https://github.com/SpaceApi/schema/pull/80
+[#109]: https://github.com/SpaceApi/schema/pull/109
