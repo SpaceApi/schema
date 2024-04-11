@@ -51,7 +51,7 @@
           ]
         },
         "hint": {
-          "description": "information that can be used to describe how to access your space, if it is not trivial to find when standing at the address",
+          "description": "Information that can be used to describe how to access your space, if it is not trivial to find when standing at the address",
           "type": "string",
           "examples": [
             "Ring the doorbell marked with HACKSPACE",
