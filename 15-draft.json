@@ -414,11 +414,10 @@
                 "type": "number"
               },
               "unit": {
-                "description": "The unit of pressure used by your sensor<br>Note: The <code>hPA</code> unit is deprecated and should not be used anymore. Use the correct <code>hPa</code> unit instead.",
+                "description": "The unit of pressure used by your sensor",
                 "type": "string",
                 "enum": [
-                  "hPa",
-                  "hPA"
+                  "hPa"
                 ]
               },
               "location": {

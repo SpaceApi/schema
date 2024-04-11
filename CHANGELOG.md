@@ -8,6 +8,12 @@ Changes should start with one of the following tags:
 - `[changed]` for changes to the existing API
 - `[removed]` for keys that have been removed from the schema
 
+## v15
+
+`sensors`:
+
+- [removed] The deprecated unit `hPA` in `barometer.unit` was removed, use `hPa` instead
+
 ## v14
 
 Root level:
