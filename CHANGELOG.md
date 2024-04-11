@@ -8,12 +8,30 @@ Changes should start with one of the following tags:
 - `[changed]` for changes to the existing API
 - `[removed]` for keys that have been removed from the schema
 
-## v15
+## v15 (unreleased)
+
+Root level:
+
+- [added] The `linked_spaces` field was added ([#75], [#92])
+
+`events`:
+
+- [changed] Clarify that `timestamp` unit is in seconds ([#98])
+
+`location`:
+
+- [added] The `hint` field was added ([#102])
 
 `sensors`:
 
+- [added] The `power_generation` sensor was added ([#105])
+- [added] The `lastchange` field was added to all sensors ([#97])
 - [removed] The deprecated unit `hPA` in `barometer.unit` was removed, use `hPa` instead ([#109])
 - [removed] The redundant unit `mW` in `power_consumption.unit` was removed, use `W` instead ([#109])
+
+`state`:
+
+- [changed] Clarify that `lastchange` unit is in seconds ([#98])
 
 ## v14
 
@@ -78,6 +96,12 @@ Root level:
 [#67]: https://github.com/SpaceApi/schema/pull/67
 [#70]: https://github.com/SpaceApi/schema/pull/70
 [#72]: https://github.com/SpaceApi/schema/pull/72
+[#75]: https://github.com/SpaceApi/schema/pull/75
 [#77]: https://github.com/SpaceApi/schema/pull/77
 [#80]: https://github.com/SpaceApi/schema/pull/80
 [#109]: https://github.com/SpaceApi/schema/pull/109
+[#92]: https://github.com/SpaceApi/schema/pull/92
+[#97]: https://github.com/SpaceApi/schema/pull/97
+[#98]: https://github.com/SpaceApi/schema/pull/98
+[#102]: https://github.com/SpaceApi/schema/pull/102
+[#105]: https://github.com/SpaceApi/schema/pull/105
