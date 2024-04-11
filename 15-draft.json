@@ -50,6 +50,15 @@
             "Antarctica/Palmer"
           ]
         },
+        "country_code": {
+          "description": "Country code in ISO 3166 alpha-2 format",
+          "type": "string",
+          "examples": [
+            "CH",
+            "DE",
+            "UA"
+          ]
+        },
         "hint": {
           "description": "Information that can be used to describe how to access your space, if it is not trivial to find when standing at the address",
           "type": "string",

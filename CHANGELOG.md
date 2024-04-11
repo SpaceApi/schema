@@ -21,6 +21,7 @@ Root level:
 `location`:
 
 - [added] The `hint` field was added ([#102])
+- [added] The `country_code` field was added ([#108])
 - [changed] Make entire `location` field optional to enable the inclusion of groups without physical location ([#106])
 
 `sensors`:
@@ -107,3 +108,4 @@ Root level:
 [#102]: https://github.com/SpaceApi/schema/pull/102
 [#105]: https://github.com/SpaceApi/schema/pull/105
 [#106]: https://github.com/SpaceApi/schema/pull/106
+[#108]: https://github.com/SpaceApi/schema/pull/108
