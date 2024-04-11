@@ -830,7 +830,6 @@
                 "description": "The unit of the sensor value.",
                 "type": "string",
                 "enum": [
-                  "mW",
                   "W",
                   "VA"
                 ]
