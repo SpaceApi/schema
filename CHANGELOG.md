@@ -13,6 +13,7 @@ Changes should start with one of the following tags:
 `sensors`:
 
 - [removed] The deprecated unit `hPA` in `barometer.unit` was removed, use `hPa` instead
+- [removed] The redundant unit `mW` in `power_consumption.unit` was removed, use `W` instead
 
 ## v14
 

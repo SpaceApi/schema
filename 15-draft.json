@@ -790,7 +790,6 @@
                 "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
                 "type": "string",
                 "enum": [
-                  "mW",
                   "W",
                   "VA"
                 ]
