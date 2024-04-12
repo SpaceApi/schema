@@ -8,6 +8,13 @@ Changes should start with one of the following tags:
 - `[changed]` for changes to the existing API
 - `[removed]` for keys that have been removed from the schema
 
+## v15
+
+`sensors`:
+
+- [removed] The deprecated unit `hPA` in `barometer.unit` was removed, use `hPa` instead ([#109])
+- [removed] The redundant unit `mW` in `power_consumption.unit` was removed, use `W` instead ([#109])
+
 ## v14
 
 Root level:
@@ -73,3 +80,4 @@ Root level:
 [#72]: https://github.com/SpaceApi/schema/pull/72
 [#77]: https://github.com/SpaceApi/schema/pull/77
 [#80]: https://github.com/SpaceApi/schema/pull/80
+[#109]: https://github.com/SpaceApi/schema/pull/109

@@ -414,11 +414,10 @@
                 "type": "number"
               },
               "unit": {
-                "description": "The unit of pressure used by your sensor<br>Note: The <code>hPA</code> unit is deprecated and should not be used anymore. Use the correct <code>hPa</code> unit instead.",
+                "description": "The unit of pressure used by your sensor",
                 "type": "string",
                 "enum": [
-                  "hPa",
-                  "hPA"
+                  "hPa"
                 ]
               },
               "location": {
@@ -695,7 +694,7 @@
                 "type": "number"
               },
               "unit": {
-                "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
+                "description": "The humidity unit",
                 "type": "string",
                 "enum": [
                   "%"
@@ -788,10 +787,9 @@
                 "type": "number"
               },
               "unit": {
-                "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
+                "description": "The power unit",
                 "type": "string",
                 "enum": [
-                  "mW",
                   "W",
                   "VA"
                 ]
@@ -889,7 +887,7 @@
                         "type": "number"
                       },
                       "unit": {
-                        "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
+                        "description": "The wind speed unit",
                         "type": "string",
                         "enum": [
                           "m/s",
@@ -912,7 +910,7 @@
                         "type": "number"
                       },
                       "unit": {
-                        "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
+                        "description": "The gust speed unit",
                         "type": "string",
                         "enum": [
                           "m/s",
@@ -935,7 +933,7 @@
                         "type": "number"
                       },
                       "unit": {
-                        "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
+                        "description": "The direction unit",
                         "type": "string",
                         "enum": [
                           "°"
@@ -956,7 +954,7 @@
                         "type": "number"
                       },
                       "unit": {
-                        "description": "The unit of the sensor value. You should always define the unit though if the sensor is a flag of a boolean type then you can of course omit it.",
+                        "description": "The elevation unit",
                         "type": "string",
                         "enum": [
                           "m"
