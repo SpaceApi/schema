@@ -1190,14 +1190,17 @@
             "type": "string"
           }
         },
-        
         "anyOf": [
-          "required": [
-            "endpoint"
-          ],
-          "required": [
-            "website"
-          ]
+          {
+            "required": [
+              "endpoint"
+            ]
+          },
+          {
+            "required": [
+              "website"
+            ]
+          }
         ]
       }
     }
