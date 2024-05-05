@@ -1185,7 +1185,7 @@
             "description": "The SpaceAPI endpoint of the space",
             "type": "string"
           },
-          "url": {
+          "website": {
             "description": "The website of the space",
             "type": "string"
           }
