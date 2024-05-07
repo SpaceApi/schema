@@ -1475,13 +1475,26 @@
       "items": {
         "type": "object",
         "properties": {
-          "url": {
-            "description": "The space's website according to their SpaceAPI endpoint",
+          "endpoint": {
+            "description": "The SpaceAPI endpoint of the space",
+            "type": "string"
+          },
+          "website": {
+            "description": "The website of the space",
             "type": "string"
           }
         },
-        "required": [
-          "url"
+        "anyOf": [
+          {
+            "required": [
+              "endpoint"
+            ]
+          },
+          {
+            "required": [
+              "website"
+            ]
+          }
         ]
       }
     }
