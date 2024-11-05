@@ -36,6 +36,10 @@ Root level:
 
 - [changed] Clarify that `lastchange` unit is in seconds ([#98])
 
+`membership_plans`:
+
+- [added] The `quarterly` enum value was added to `billing_interval`
+
 ## v14
 
 Root level:
