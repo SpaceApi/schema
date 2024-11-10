@@ -106,10 +106,15 @@
           "minItems": 1
         }
       },
-      "required": [
-        "lat",
-        "lon"
-      ]
+      "minProperties": 1,
+      "dependentRequired": {
+        "lat": [
+          "lon"
+        ],
+        "lon": [
+          "lat"
+        ]
+      }
     },
     "spacefed": {
       "description": "A flag indicating if the hackerspace uses SpaceFED, a federated login scheme so that visiting hackers can use the space WiFi with their home space credentials.",
