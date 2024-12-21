@@ -417,6 +417,54 @@
             ]
           }
         },
+        "carbondioxide": {
+          "description": "CO2 sensor",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "The sensor value",
+                "type": "number"
+              },
+              "unit": {
+                "description": "The unit of the sensor value.",
+                "type": "string",
+                "enum": [
+                  "ppm",
+                  "vol%"
+                ]
+              },
+              "location": {
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Outside",
+                  "Inside",
+                  "Ceiling",
+                  "Room 1"
+                ]
+              },
+              "name": {
+                "description": "This field is an additional field to give your sensor a name. This can be useful if you have multiple sensors in the same location.",
+                "type": "string"
+              },
+              "description": {
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
+                "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
+                "type": "number"
+              }
+            },
+            "required": [
+              "value",
+              "unit",
+              "location"
+            ]
+          }
+        },
         "door_locked": {
           "description": "Sensor type to indicate if a certain door is locked.",
           "type": "array",
