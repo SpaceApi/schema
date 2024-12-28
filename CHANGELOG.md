@@ -8,7 +8,9 @@ Changes should start with one of the following tags:
 - `[changed]` for changes to the existing API
 - `[removed]` for keys that have been removed from the schema
 
-## v15 (unreleased)
+## v16 (unreleased)
+
+## v15
 
 Root level:
 
