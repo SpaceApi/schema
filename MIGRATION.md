@@ -1,5 +1,22 @@
 # Migration guide
 
+## Migration from 14 to 15
+
+Most SpaceAPI implementation that implement v14 should already be compatible
+with v15 and can just announce compatibility for it as well:
+
+```json
+{
+  ...
+  "api_compatibility":  [ "14", "15" ],
+  ...
+}
+```
+
+The exception are spaces that use things that were deprecated in v14 like the
+`hPA` instead of `hPa` unit for the barometer sensor. See
+https://github.com/SpaceApi/schema/blob/master/CHANGELOG.md#v15 for details.
+
 ## Migration from 0.13 to 14
 
 If you're migrating from 0.13 it's fairly easy to do, under the right circumstances you can also serve a file that is compatible with both versions at the same time.
