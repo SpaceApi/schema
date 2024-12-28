@@ -30,6 +30,7 @@ Root level:
 `sensors`:
 
 - [added] The `power_generation` sensor was added ([#105])
+- [added] The `carbondioxide` sensor was added ([#116])
 - [added] The `lastchange` field was added to all sensors ([#97])
 - [removed] The deprecated unit `hPA` in `barometer.unit` was removed, use `hPa` instead ([#109])
 - [removed] The redundant unit `mW` in `power_consumption.unit` was removed, use `W` instead ([#109])
