@@ -258,6 +258,13 @@
                 "description": "Email address which can be base64 encoded.",
                 "type": "string"
               },
+              "telegram": {
+                "description": "Telegram channel link",
+                "type": "string",
+                "examples": [
+                  "https://t.me/example-space"
+                ]
+              },
               "twitter": {
                 "description": "Twitter username with leading <code>@</code>",
                 "type": "string",
