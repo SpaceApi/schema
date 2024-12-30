@@ -10,6 +10,10 @@ Changes should start with one of the following tags:
 
 ## v16 (unreleased)
 
+`contact`:
+
+- [added] The `telegram` contact option was added ([#120])
+
 ## v15
 
 Root level:
