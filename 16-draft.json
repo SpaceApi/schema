@@ -356,6 +356,13 @@
           "examples": [
             "mumble://mumble.example.org/spaceroom?version=1.2.0"
           ]
+        },
+        "telegram": {
+          "description": "URL to Telegram channel",
+          "type": "string",
+          "examples": [
+            "https://t.me/example-channel"
+          ]
         }
       }
     },
