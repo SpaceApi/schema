@@ -7,9 +7,12 @@ These are [JSON Schema](https://json-schema.org/) files for the SpaceAPI.
 
 ## Releasing a new version
 
- * Rename the current `xx-draft.json` to `xx.json`
+ * Make sure the `CHANGELOG.md` is up to date
+ * Update `MIGRATION.md` with upgrade instructions
+ * Rename the current `xx-draft.json` to `xx.json` and create `xx+1-draft.json`
    * Replace the `"$id"` field accordingly
    * Replace the `"description"` field accordingly
+   * Update the `.github/workflows` accordingly
  * Update the website
    * Regenerate the schema docs
    * Update the example
