@@ -12,6 +12,7 @@ These are [JSON Schema](https://json-schema.org/) files for the SpaceAPI.
  * Rename the current `xx-draft.json` to `xx.json` and create `xx+1-draft.json`
    * Replace the `"$id"` field accordingly
    * Replace the `"description"` field accordingly
+   * Replace the `"properties"."api_compatibility"."contains"."const"` accordingly
    * Update the `.github/workflows` accordingly
  * Update the website
    * Regenerate the schema docs
