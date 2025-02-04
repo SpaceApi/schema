@@ -11,10 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@v5
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
         with:
-          name: spaceapi/schema
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          tags: "latest"
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build schema image
+        run: |
+          docker build \
+            --no-cache \
+            --tag ghcr.io/spaceapi/schema \
+            --label "org.opencontainers.image.source=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" \
+            .
+      - name: Publish schema image
+        run: |
+          docker push ghcr.io/spaceapi/schema:latest
