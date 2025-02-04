@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - chore-ghcr  # TODO: Remove before merging
   schedule:
     - cron: '0 2 * * 0'
 jobs:
