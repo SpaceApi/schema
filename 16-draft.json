@@ -282,6 +282,13 @@
                 "examples": [
                   "@user:example.org"
                 ]
+              },
+              "telegram": {
+                "description": "Telegram username with leading <code>@</code>",
+                "type": "string",
+                "examples": [
+                  "@user"
+                ]
               }
             }
           }
