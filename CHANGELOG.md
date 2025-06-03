@@ -13,6 +13,7 @@ Changes should start with one of the following tags:
 `contact`:
 
 - [added] The `telegram` contact option was added ([#120])
+- [added] The `telegram` contact option for keymasters was added ([#126])
 
 ## v15
 
