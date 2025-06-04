@@ -389,7 +389,7 @@
           }
         },
         "radiation": {
-          "description": "Compound radiation sensor. Check this <a rel=\"nofollow\" href=\"https://sites.google.com/site/diygeigercounter/gm-tubes-supported\" target=\"_blank\">resource</a>.",
+          "description": "Compound radiation sensor. Check this <a rel=\"nofollow\" href=\"https://sites.google.com/site/diygeigercounter/technical/gm-tubes-supported\" target=\"_blank\">resource</a>.",
           "type": "object",
           "properties": {
             "alpha": {
