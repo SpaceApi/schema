@@ -1307,6 +1307,124 @@
             ]
           },
           "minItems": 1
+        },
+        "particulate_matter": {
+          "description": "Concentration of particulate matter in the air.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "properties": {
+                "type": "object",
+                "properties": {
+                  "PM10": {
+                    "description": "Concentration of particulate matter with a diameter of 10µm or less.",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "description": "The measurement value",
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "unit": {
+                        "description": "The measurement unit",
+                        "type": "string",
+                        "enum": [
+                          "µg/m³"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "unit"
+                    ]
+                  },
+                  "PM4.25": {
+                    "description": "Concentration of particulate matter with a diameter of 4.25µm or less.",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "description": "The measurement value",
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "unit": {
+                        "description": "The measurement unit",
+                        "type": "string",
+                        "enum": [
+                          "µg/m³"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "unit"
+                    ]
+                  },
+                  "PM2.5": {
+                    "description": "Concentration of particulate matter with a diameter of 2.5µm or less.",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "description": "The measurement value",
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "unit": {
+                        "description": "The measurement unit",
+                        "type": "string",
+                        "enum": [
+                          "µg/m³"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "unit"
+                    ]
+                  },
+                  "PM1": {
+                    "description": "Concentration of particulate matter with a diameter of 1µm or less.",
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "description": "The measurement value",
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "unit": {
+                        "description": "The measurement unit",
+                        "type": "string",
+                        "enum": [
+                          "µg/m³"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "unit"
+                    ]
+                  }
+		}
+              },
+              "location": {
+                "description": "Location the measurement relates to, e.g. <samp>Hackerspace</samp>.",
+                "type": "string"
+              },
+              "description": {
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
+                "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
+                "type": "number"
+              }
+            },
+            "required": [
+              "properties"
+            ]
+          },
+          "minItems": 1
         }
       }
     },

@@ -15,6 +15,10 @@ Changes should start with one of the following tags:
 - [added] The `telegram` contact option was added ([#120])
 - [added] The `telegram` contact option for keymasters was added ([#126])
 
+`sensors`:
+
+- [added] The `particulate_matter` sensor was added ([#131])
+
 ## v15
 
 Root level:
@@ -126,3 +130,4 @@ Root level:
 [#108]: https://github.com/SpaceApi/schema/pull/108
 [#107]: https://github.com/SpaceApi/schema/pull/107
 [#115]: https://github.com/SpaceApi/schema/pull/115
+[#131]: https://github.com/SpaceApi/schema/pull/131
