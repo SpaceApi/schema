@@ -259,7 +259,7 @@
                 "type": "string"
               },
               "twitter": {
-                "description": "Twitter username with leading <code>@</code>",
+                "description": "X username with leading <code>@</code>",
                 "type": "string",
                 "examples": [
                   "@space_api"
@@ -301,7 +301,7 @@
           ]
         },
         "twitter": {
-          "description": "Twitter username with leading <code>@</code>",
+          "description": "X username with leading <code>@</code>",
           "type": "string",
           "examples": [
             "@space_api"
@@ -369,6 +369,13 @@
           "type": "string",
           "examples": [
             "https://t.me/example-channel"
+          ]
+        },
+        "instagram": {
+          "description": "URL to Instagram profile",
+          "type": "string",
+          "examples": [
+            "https://www.instagram.com/examplespace"
           ]
         }
       }
