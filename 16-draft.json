@@ -469,6 +469,44 @@
             ]
           }
         },
+        "door_open": {
+          "description": "Sensor type to indicate if a certain door is currently open.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "true means the door is open, false means the door is closed",
+                "type": "boolean"
+              },
+              "location": {
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": [
+                  "Front door",
+                  "Back door",
+                  "Workshop"
+                ]
+              },
+              "name": {
+                "description": "This field is an additional field to give your sensor a name.",
+                "type": "string"
+              },
+              "description": {
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
+                "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
+                "type": "number"
+              }
+            },
+            "required": [
+              "value",
+              "location"
+            ]
+          }
+        },
         "barometer": {
           "description": "Barometer sensor",
           "type": "array",
@@ -1307,6 +1345,74 @@
             ]
           },
           "minItems": 1
+        },        
+        "illuminance": {
+          "description": "Illuminance sensor.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "The sensor value",
+                "type": "number"
+              },
+              "unit": {
+                "description": "The illuminance unit",
+                "type": "string",
+                "enum": ["lx"]
+              },
+              "location": {
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": ["Main Room", "Workshop", "Entrance"]
+              },
+              "name": {
+                "description": "This field is an additional field to give your sensor a name.",
+                "type": "string"
+              },
+              "description": {
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
+                "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
+                "type": "number"
+              }
+            },
+            "required": ["value", "unit", "location"]
+          }
+        },
+        "light_state": {
+          "description": "Sensor type to indicate a coarse ambient light state.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "The sensor value",
+                "type": "string",
+                "enum": ["dark", "bright"]
+              },
+              "location": {
+                "description": "The location of your sensor",
+                "type": "string",
+                "examples": ["Main Room", "Workshop", "Entrance"]
+              },
+              "name": {
+                "description": "This field is an additional field to give your sensor a name.",
+                "type": "string"
+              },
+              "description": {
+                "description": "An extra field that you can use to attach some additional information to this sensor instance",
+                "type": "string"
+              },
+              "lastchange": {
+                "description": "The Unix timestamp (in seconds) when the sensor value changed most recently",
+                "type": "number"
+              }
+            },
+            "required": ["value", "location"]
+          }
         }
       }
     },
